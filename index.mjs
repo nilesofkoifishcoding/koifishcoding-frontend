@@ -1,3 +1,3 @@
-import { handler } from './.output/server/index.mjs'
+import { handler as internalHandler } from './.output/server/index.mjs'
 
-export const { statusCode, headers, body } = handler({ rawPath: '/' })
+export const handler = internalHandler
