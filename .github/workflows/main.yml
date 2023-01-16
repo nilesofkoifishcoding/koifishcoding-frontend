@@ -29,5 +29,5 @@ jobs:
           npm run build
       - name: deploy
         run: |
-          zip -r deploy.zip ./*
+          zip -r deploy.zip .
           aws lambda update-function-code --function-name=koifishcoding-frontend --zip-file=fileb://deploy.zip
