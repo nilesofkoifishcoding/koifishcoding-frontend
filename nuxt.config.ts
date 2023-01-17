@@ -19,8 +19,8 @@ export default defineNuxtConfig({
         preset: 'aws-lambda',
         serveStatic: true,
         compressPublicAssets: {
-            gzip: true,
-            brotli: false
+            gzip: false,
+            brotli: true
         }
     },
     typescript: {
