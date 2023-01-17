@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
     app: {
         head: {
-            title: 'Koi Fish Coding'
+            title: 'Koi Fish Coding',
+            link: [{ rel: 'icon', type: 'image/png', href: '/kai-favicon.png'}]
         }
     },
     modules: [
