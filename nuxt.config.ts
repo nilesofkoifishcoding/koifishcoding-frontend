@@ -16,7 +16,8 @@ export default defineNuxtConfig({
         }]
     ],
     nitro: {
-        preset: 'aws-lambda'
+        preset: 'aws-lambda',
+        serveStatic: true,
     },
     typescript: {
         shim: false
