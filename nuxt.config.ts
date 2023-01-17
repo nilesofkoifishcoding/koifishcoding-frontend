@@ -7,11 +7,13 @@ export default defineNuxtConfig({
     },
     modules: [
         ['@nuxtjs/google-fonts', {
+            download: true,
+            base64: true,
             families: {
-                'Lexend+Mega': [600],
-                'Lilita+One': true,
-                'Heebo': true,
-                Montserrat: [400, 500, 600, 700]
+                // 'Lexend+Mega': [600],
+                // 'Lilita+One': true,
+                // 'Heebo': true,
+                Montserrat: [600]
             }
         }]
     ],
