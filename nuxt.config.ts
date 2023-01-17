@@ -18,6 +18,10 @@ export default defineNuxtConfig({
     nitro: {
         preset: 'aws-lambda',
         serveStatic: true,
+        compressPublicAssets: {
+            gzip: true,
+            brotli: true
+        }
     },
     typescript: {
         shim: false
