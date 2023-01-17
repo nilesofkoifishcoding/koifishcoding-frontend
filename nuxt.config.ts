@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         serveStatic: true,
         compressPublicAssets: {
             gzip: true,
-            brotli: true
+            brotli: false
         }
     },
     typescript: {
