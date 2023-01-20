@@ -4,7 +4,7 @@ export default defineNuxtConfig({
         cdnURL: 'https://static.koifishcoding.com',
         head: {
             title: 'Koi Fish Coding',
-            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}]
+            link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://static.koifishcoding.com/favicon.ico'}]
         }
     },
     modules: [
