@@ -1,6 +1,6 @@
 <template>
     <button>
-        <span class="text">Get Started</span>
+        <span class="text">Enroll Now</span>
     </button>
 </template>
 

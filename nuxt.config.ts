@@ -14,7 +14,7 @@ export default defineNuxtConfig({
                 // 'Lexend+Mega': [600],
                 // 'Lilita+One': true,
                 // 'Heebo': true,
-                Montserrat: [600]
+                Montserrat: [400, 500, 600, 700]
             }
         }]
     ],

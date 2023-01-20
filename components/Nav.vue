@@ -16,6 +16,7 @@ header
     right: 0
     border-bottom: 1px solid var(--color-border-1)
     background-color: white
+    z-index: 1
 
     .header-container
         margin: 0 auto

@@ -1,9 +1,7 @@
 <template>
   <Nav />
-  <div class="wrapper">
-    <!-- <HomeHero /> -->
-    <HomeContent />
-  </div>
+  <!-- <HomeHero /> -->
+  <HomeContent />
 </template>
 
 <script setup>
