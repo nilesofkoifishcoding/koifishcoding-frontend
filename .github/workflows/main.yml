@@ -45,7 +45,7 @@ jobs:
           
       - name: deploy
         run: |
-          zip -r deploy.zip . -x ./node_modules\*
+          zip -r deploy.zip . -x ./node_modules\* ./assets\*
           aws lambda update-function-code --function-name=koifishcoding-frontend --zip-file=fileb://deploy.zip
           
       - name: Invalidate CloudFront
