@@ -14,8 +14,4 @@ console.log(route.params)
 <style lang="sass">
 .wrapper
   background-color: var(--color-bg-1)
-//   height: 100vh
-//   overflow-y: auto
-//   overflow-x: hidden
-//   perspective: 10px
 </style>

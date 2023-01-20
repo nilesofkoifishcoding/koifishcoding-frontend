@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        cdnURL: 'https://d2dz516jo5lgmd.cloudfront.net',
+        cdnURL: 'https://static.koifishcoding.com',
         head: {
             title: 'Koi Fish Coding',
-            link: [{ rel: 'icon', type: 'image/png', href: '/kai-favicon.png'}]
+            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}]
         }
     },
     modules: [
