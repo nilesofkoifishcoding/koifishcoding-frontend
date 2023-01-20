@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
+        cdnURL: 'https://d2dz516jo5lgmd.cloudfront.net',
         head: {
             title: 'Koi Fish Coding',
             link: [{ rel: 'icon', type: 'image/png', href: '/kai-favicon.png'}]
