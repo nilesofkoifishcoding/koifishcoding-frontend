@@ -4,7 +4,19 @@ export default defineNuxtConfig({
         cdnURL: 'https://static.koifishcoding.com',
         head: {
             title: 'Koi Fish Coding',
-            link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://static.koifishcoding.com/favicon.ico'}]
+            link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://static.koifishcoding.com/favicon.ico'}],
+            script: [
+                { src: 'https://js.stripe.com/v3/pricing-table.js'},
+            ]
+        },
+    },
+    vue: {
+        compilerOptions: {
+            isCustomElement: (tag: string) => {
+                return (
+                    tag === 'stripe-pricing-table'
+                )
+            }
         }
     },
     modules: [
@@ -15,6 +27,8 @@ export default defineNuxtConfig({
                 // 'Lexend+Mega': [600],
                 // 'Lilita+One': true,
                 // 'Heebo': true,
+                'Lexend Mega': [400, 500, 600, 700],
+                'Catamaran': [300, 400, 500, 600, 700],
                 Montserrat: [400, 500, 600, 700]
             }
         }]

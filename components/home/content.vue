@@ -26,6 +26,15 @@
 
         </div>
     </div>
+    <div class="tools">Something</div>
+    <div class="starting-salary">What do you want your starting salary to be?</div>
+    <HomeHowItWorks />
+    <div class="pricing">
+
+        <!-- <stripe-pricing-table pricing-table-id="prctbl_1MSSlbEtf4E1q3XKhjkvtvq7"
+            publishable-key="pk_test_51MQvsfEtf4E1q3XKjzBgnwzHjWHHBSdjUbSC3rtT0AArLzVZz6T2tdemfJVDBOCHHAJfVKCX9LiBVskUtUA1gmOa00G7Nkuknh">
+        </stripe-pricing-table> -->
+    </div>
 </template>
 
 <script setup>
@@ -34,10 +43,11 @@
 <style scoped lang="sass">
 .root
     height: 700px
-    background-color: var(--color-bg-1)
-    margin-top: 61px
+    background-color: var(--color-bg-2)
+    margin-top: 91px
     position: relative
     display: flex
+    z-index: 0
     & > div
         width: 50%
     .header-content
@@ -53,14 +63,24 @@
                 font-weight: 600
                 font-size: 1.2rem
                 margin-bottom: 1.5rem
+                margin-left: 2px
             .heading
+                margin-top: 2rem
                 font-family: 'Montserrat'
+                font-family: 'Catamaran'
                 color: var(--color-brand-3)
-                font-size: 4rem
+                font-size: 5rem
                 display: flex
-                font-weight: 600
+                justify-content: center
+                align-items: flex-start
+                font-weight: 700
                 flex-direction: column
-                letter-spacing: -0.15rem
+                letter-spacing: -.1rem
+                span
+                    line-height: 5.5rem
+                    &:nth-child(1)
+                        margin-left: -1px
+                        
     .bg-images
         // position: absolute
         // right: 0
@@ -87,4 +107,14 @@
                 width: 40%
             // border: 1px red solid
 
+.tools
+    width: 1000px
+    height: 160px
+    // border: 1px gray solid
+    margin: 0 auto
+    position: relative
+    top: -105px
+    background-color: var(--color-white)
+    border-radius: 6px
+    box-shadow: 0 0 3px 1px rgba(30, 30, 30, 0.1)
 </style>

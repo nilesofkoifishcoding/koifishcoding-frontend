@@ -1,4 +1,5 @@
 <template>
+    <div class="top-bar"></div>
     <header>
         <div class="header-container">
             <img src="~/assets/svgs/koi-fish-coding-logo.svg" alt="Koi Fish Coding Logo" />
@@ -8,9 +9,17 @@
 </template>
 
 <style scoped lang="sass">
-header
+.top-bar
     position: fixed
     top: 0
+    left: 0
+    right: 0
+    height: 30px
+    background-color: var(--color-bg-1)
+    z-index: 1
+header
+    position: fixed
+    top: 40px
     height: 61px
     left: 0
     right: 0
