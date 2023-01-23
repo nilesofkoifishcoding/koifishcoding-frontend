@@ -10,21 +10,25 @@
 
 <style scoped lang="sass">
 .top-bar
-    position: fixed
+    position: sticky
     top: 0
     left: 0
     right: 0
     height: 30px
-    background-color: var(--color-bg-1)
+    background-color: var(--color-bg-3)
+    // background-color: green
     z-index: 1
 header
-    position: fixed
-    top: 40px
+    // opacity: 0
+    position: sticky
+    // top: 30px
+    top: 0
     height: 61px
     left: 0
     right: 0
     border-bottom: 1px solid var(--color-border-1)
     background-color: white
+    // background-color: green
     z-index: 1
 
     .header-container

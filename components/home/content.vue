@@ -37,14 +37,15 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+console.log('hey')
 </script>
 
 <style scoped lang="sass">
 .root
     height: 700px
     background-color: var(--color-bg-2)
-    margin-top: 91px
+    // margin-top: 30px
     position: relative
     display: flex
     z-index: 0

@@ -16,7 +16,10 @@ body
 
     // Brand
     --color-brand-1: #e52949
+    --color-brand-1a: #e5294825
+    --color-brand-1b: #e5294849
     --color-brand-2: #993333
+    --color-brand-2a: #99333350
     --color-brand-3: #030b5d
 
     // Borders
@@ -25,3 +28,16 @@ body
     // Backgrounds
     --color-bg-1: #f8f9fb
     --color-bg-2: #fef5ee
+    --color-bg-3: #f4f4f6
+
+@keyframes border-blink
+    0%
+        border: 1px var(--color-brand-1a) solid
+    50%
+        border: 1px var(--color-brand-1b) solid
+
+body
+    max-width: 1600px
+    box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
+    margin: 0 auto
+    position: relative
