@@ -1,7 +1,5 @@
 <template>
-  <Nav />
-  <!-- <HomeHero /> -->
-  <HomeContent />
+  <NuxtPage />
 </template>
 
 <script setup>
@@ -10,8 +8,6 @@ console.log(route.params)
 
 </script>
 
-
 <style lang="sass">
-.wrapper
-  background-color: var(--color-bg-1)
+// .wrapper
 </style>

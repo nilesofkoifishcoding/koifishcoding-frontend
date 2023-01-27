@@ -1,17 +1,19 @@
 <template>
-    <button>
-        <span class="text">Enroll Now</span>
-    </button>
+    <NuxtLink to="/enroll">
+        <button>
+            <span class="text">Enroll Now</span>
+        </button>
+    </NuxtLink>
 </template>
 
 <style scoped lang="sass">
+a
+    text-decoration: none
 button
     border: none
     outline: none
-    // width: 6.rem
     padding: 0 .6rem
     height: 2.25rem
-    // height: calc(2.25rem - 1px)
     color: white
 
     background-color: var(--color-white)
@@ -25,6 +27,7 @@ button
     font-family: 'Montserrat'
     font-size: 1rem
     font-weight: 600
+    text-decoration: none
 
     transition: background-color .3s ease
 

@@ -27,8 +27,9 @@
         </div>
     </div>
     <div class="tools">Something</div>
-    <div class="starting-salary">What do you want your starting salary to be?</div>
-    <HomeHowItWorks />
+    <HomeHeroSubMain />
+    <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
+    <HomeHowItWorks v-if="false" />
     <div class="pricing">
 
         <!-- <stripe-pricing-table pricing-table-id="prctbl_1MSSlbEtf4E1q3XKhjkvtvq7"

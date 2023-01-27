@@ -13,6 +13,13 @@ body
 :root
     // **************** Colors ****************
     --color-white: #fff
+    --color-white-a: #ffffff7e
+    --color-white-b: #ffffffc7
+
+    --color-dark: #333131
+    --color-dark-a: #33313149
+
+    --color-success: #42fc48
 
     // Brand
     --color-brand-1: #e52949
@@ -21,6 +28,8 @@ body
     --color-brand-2: #993333
     --color-brand-2a: #99333350
     --color-brand-3: #030b5d
+    --color-brand-4: #F8A807
+    --color-brand-4a: #f8a8072c
 
     // Borders
     --color-border-1: #e7ebf0
@@ -36,8 +45,11 @@ body
     50%
         border: 1px var(--color-brand-1b) solid
 
-body
-    max-width: 1600px
-    box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
-    margin: 0 auto
-    position: relative
+.gradient-text
+    font-weight: bold
+    background-image: linear-gradient(120deg, var(--color-brand-1), var(--color-brand-4))
+
+.v-enter-active, .v-leave-active 
+    transition: opacity 0.2s ease
+.v-enter-from, .v-enter-to
+    opacity: 0
