@@ -30,10 +30,11 @@ header
     background-color: white
     // background-color: green
     z-index: 1
+    padding: 0 10px
 
     .header-container
         margin: 0 auto
-        width: 1400px
+        max-width: 1400px
         height: 100%
         display: flex
         justify-content: space-between

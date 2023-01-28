@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="/enroll">
+    <NuxtLink to="mailto:niles@koifishcoding.com">
         <button>
             <span class="text">Enroll Now</span>
         </button>

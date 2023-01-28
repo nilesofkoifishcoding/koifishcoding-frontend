@@ -72,16 +72,22 @@ nuxtApp.hook('page:finish', () => {
     display: flex
     align-items: center
     margin-bottom: 100px
+    @media screen and (max-width: 700px)
+        flex-direction: column
     .text
         flex: 1
         font-family: Montserrat
         font-weight: 700
         font-size: 1.6rem
+        @media screen and (max-width: 700px)
+            padding: 30px
     .text div:nth-child(2)
         font-weight: 400
         margin-top: 1rem
         font-size: 1.2rem
     .graphic
+        @media screen and (max-width: 700px)
+            display: none
         flex: 1.5
         .screen-container
             perspective: 80rem
