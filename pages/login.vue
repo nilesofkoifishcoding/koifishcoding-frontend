@@ -1,6 +1,8 @@
 <template>
-    <img width="250" style="margin: 0 auto; display: block; position: relative; top: 40px;"
-        src="~/assets/svgs/koi-fish-coding-logo.svg" alt="Koi Fish Coding Logo" />
+    <NuxtLink to="/">
+        <img width="250" style="margin: 0 auto; display: block; position: relative; top: 40px;"
+            src="~/assets/svgs/koi-fish-coding-logo.svg" alt="Koi Fish Coding Logo" />
+    </NuxtLink>
     <div class="form">
         <div class="inputs">
             <input type="email" placeholder="email">
@@ -13,6 +15,7 @@
 </script>
 
 <style scoped lang="sass">
+  
 .form
     height: 100vh
     display: flex
