@@ -2,8 +2,8 @@
     <div class="enroll-hero">
         <div class="overlay"></div>
         <div class="text-overlay">
-            <h1>Full Stack Developer Program</h1>
             <h2>101 - Developer Fundamentals</h2>
+            <h1><span>F</span>ull Stack Developer Program</h1>
             <div class="points">
                 <div class="point">
                     <div class="left-point">Program Length</div>
@@ -29,7 +29,6 @@
             <!-- <h3>Program Length: 12 Sessions (4 Weeks)</h3> -->
         </div>
     </div>
-    <div>hey</div>
 </template>
 
 <style scoped lang="sass">
@@ -61,12 +60,30 @@
             font-size: 5rem
             font-weight: 600
             text-align: center
+            margin-top: .5rem
+            margin-bottom: 1rem
+            opacity: 1
+            span
+                color: var(--color-brand-1)
         h2
-            background-color: var(--color-dark)
-            color: var(--color-white)
+            // background-color: var(--color-dark)
+            // color: var(--color-white)
+            // padding: .5rem 2rem
+            // border-radius: 5px
+            // font-size: 2rem
+            
             padding: .5rem 2rem
             border-radius: 5px
-            font-size: 2rem
+            background-color: transparent
+            color: var(--color-brand-1)
+            margin-bottom: 1rem
+            font-size: 2.4rem
+            color: var(--color-dark)
+            border: 4px var(--color-dark) solid
+
+
+            // border: 4px var(--color-brand-1) solid
+            // color: var(--color-brand-1)
 
     .points
         width: 30rem
@@ -80,7 +97,4 @@
                 position: relative
                 top: 12px
                 margin: 0 7px
-
-
-    margin-bottom: 100rem
 </style>
