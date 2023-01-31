@@ -1,9 +1,9 @@
 <template>
-    <NuxtLink to="mailto:niles@koifishcoding.com">
+    <a href="mailto:niles@koifishcoding.com">
         <button>
             <span class="text">Enroll Now</span>
         </button>
-    </NuxtLink>
+    </a>
 </template>
 
 <style scoped lang="sass">

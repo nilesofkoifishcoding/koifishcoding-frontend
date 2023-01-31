@@ -45,26 +45,17 @@ console.log('hey')
 <style scoped lang="sass">
 .root
     height: 700px
-    // background-color: var(--color-bg-2)
-    // margin-top: 30px
+    background-color: var(--color-bg-2)
     position: relative
     display: flex
     z-index: 0
-    background-image: url('~/assets/jpgs/grayLandscape.png')
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center 90%
     & > div
         width: 50%
     .header-content
-        display: none
-        // border: 1px blue solid
         display: flex
         align-items: center
-        display: none
         .content
             padding-left: 150px
-            // border: 1px green solid
             .aux-heading
                 font-family: 'Montserrat'
                 color: var(--color-brand-1)
@@ -90,18 +81,11 @@ console.log('hey')
                         margin-left: -1px
                         
     .bg-images
-        display: none
-        // position: absolute
-        // right: 0
-        // top: 0
-        // bottom: 0
         width: 30%
         display: grid
         grid-template-columns: repeat(2, 60%)
         grid-template-rows: repeat(6, 150px)
-        // border: 1px red solid
         position: relative
-        display: none
 
         .excellence-panel
             position: absolute
@@ -115,18 +99,15 @@ console.log('hey')
         & > div.mini
             img
                 width: 40%
-            // border: 1px red solid
 
 .tools
     display: none
     max-width: 1000px
     height: 160px
-    // border: 1px gray solid
     margin: 0 auto
     position: relative
     top: -95px
     background-color: var(--color-white-b)
-    // filter: blur(10px)
     backdrop-filter: blur(8px)
     border-radius: 6px
     box-shadow: 0 0 3px 1px rgba(30, 30, 30, 0.3)
