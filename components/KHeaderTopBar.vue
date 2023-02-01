@@ -1,7 +1,6 @@
 <template>
     <div class="top-bar">
         <div class="call">
-            <!-- <span class="text">Talk to a Human</span> -->
             <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-phone']" />
             <span class="number">(615) 382-3829</span>
         </div>
@@ -12,6 +11,10 @@
         <NuxtLink to="/login">
             <div class="sp">Student Portal</div>
         </NuxtLink>
+        <div class="call2">
+            <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-phone']" />
+            <span class="number">(615) 382-3829</span>
+        </div>
     </div>
 </template>
 
@@ -44,6 +47,9 @@ nuxtApp.hook('page:finish', () => {
     color: var(--color-brand-3)
     font-size: 0.85rem
 
+    @media screen and (max-width: $breakpoint-small)
+        justify-content: space-between
+
     & > div
         padding: 1px 6px
 
@@ -68,14 +74,15 @@ nuxtApp.hook('page:finish', () => {
         span
             position: relative
             margin-left: 0.4rem
-        @media screen and (max-width: $breakpoint-medium)
-            span
-                display: none
+        // @media screen and (max-width: $breakpoint-medium)
+        //     span
+        //         display: none
     
-    .call
+    .call, .call2
         display: flex
         align-items: center
         margin-right: 1.5rem
+    
         svg
             position: relative
             top: -1px
@@ -84,7 +91,13 @@ nuxtApp.hook('page:finish', () => {
         .number
             margin-left: 0.5rem
 
+    .call
         @media screen and (max-width: $breakpoint-small)
-            // .number
-            //     display: none
+            display: none
+
+
+    .call2
+        display: none
+        @media screen and (max-width: $breakpoint-small)
+            display: block
 </style>
