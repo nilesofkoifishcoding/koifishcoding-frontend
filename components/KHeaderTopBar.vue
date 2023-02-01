@@ -6,7 +6,7 @@
             <span class="number">(615) 382-3829</span>
         </div>
         <div class="lang">
-            <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-globe']" />
+            <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-earth-americas']" />
             <span>EN</span>
         </div>
         <NuxtLink to="/login">
@@ -31,31 +31,33 @@ nuxtApp.hook('page:finish', () => {
     left: 0
     right: 0
     height: 33px
-    background-color: var(--color-bg-1)
+    // background-color: var(--color-bg-1)
     z-index: 1
 
     display: flex
     justify-content: flex-end
     align-items: center
     font-family: 'Catamaran'
-    font-weight: 500
+    font-weight: 600
 
     padding: 0 10px
     color: var(--color-brand-3)
-    font-size: 1rem
+    font-size: 0.85rem
 
     & > div
         padding: 1px 6px
 
     & > div:hover
-        background-color: blue
+        // background-color: blue
         cursor: pointer
         border-radius: 8px
         padding: 1px 6px
-        background-color: var(--color-white)
+        // background-color: var(--color-white)
 
     .sp
         margin-left: 1.5rem
+        @media screen and (max-width: $breakpoint-small)
+            display: none
 
     .lang
         display: flex
@@ -66,7 +68,7 @@ nuxtApp.hook('page:finish', () => {
         span
             position: relative
             margin-left: 0.4rem
-        @media screen and (max-width: 640px)
+        @media screen and (max-width: $breakpoint-medium)
             span
                 display: none
     
@@ -82,7 +84,7 @@ nuxtApp.hook('page:finish', () => {
         .number
             margin-left: 0.5rem
 
-        @media screen and (max-width: 420px)
-            .number
-                display: none
+        @media screen and (max-width: $breakpoint-small)
+            // .number
+            //     display: none
 </style>

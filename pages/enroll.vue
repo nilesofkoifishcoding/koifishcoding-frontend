@@ -4,6 +4,7 @@
         <EnrollHero />
         <div class="enroll-body">
             <EnrollStartDate />
+            <UiCalendar />
             <div style="height: 1000px"></div>
         </div>
     </div>
