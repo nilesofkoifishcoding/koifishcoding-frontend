@@ -46,7 +46,6 @@ const props = withDefaults(
 .calendar-day
     font-family: 'Catamaran'
     padding: 0.2rem 0.5rem
-    // border: 1px red solid
     color: var(--color-dark-a)
     
     box-shadow: 0 0 0 .5px var(--color-border-1)

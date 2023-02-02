@@ -1,6 +1,9 @@
 <template>
     <div class="ui-calendar">
-
+        <div class="title">March 2023</div>
+        <template v-for="dayOfWeek in daysOfWeek">
+            <div class="day-of-week">{{ dayOfWeek }}</div>
+        </template>
         <template v-for="week in treeOfDays">
             <template v-for="day in week">
                 <UiCalendarDay :day="day" />
@@ -11,6 +14,8 @@
 </template>
 
 <script setup lang="ts">
+
+const daysOfWeek = ref(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
 
 const year = '2023'
 const month = '02'
@@ -72,10 +77,32 @@ const treeOfDays = ref(days);
 .ui-calendar
     margin-top: 4rem
     display: grid
-    grid-auto-rows: 7rem
+    grid-template-rows: 3.2rem 2rem 7rem 7rem 7rem 7rem 7rem 7rem
     grid-template-columns: repeat(7, 1fr)
     border: 1px var(--color-border-1) solid
     border-radius: 6px
     overflow: hidden
+
+    .title
+        grid-column: 1 / 8
+        background-color: var(--color-bg-4)
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        font-family: 'Catamaran'
+        padding: 1rem
+        font-size: 1.3rem
+        font-weight: 500
+
+    .day-of-week
+        box-shadow: 0 0 0 .5px var(--color-border-1)
+        font-family: 'Catamaran'
+        text-align: center
+        // background-color: var(--color-bg-4)
+        color: var(--color-dark-a)
+        font-weight: 600
+        display: flex
+        justify-content: center
+        align-items: center
         
 </style>
