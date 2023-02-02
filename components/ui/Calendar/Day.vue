@@ -48,7 +48,8 @@ const props = withDefaults(
     padding: 0.2rem 0.5rem
     color: var(--color-dark-a)
     
-    box-shadow: 0 0 0 .5px var(--color-border-1)
+    // box-shadow: 0 0 0 1px var(--color-border-1)
+    border: 1px var(--color-border-1) solid
 
     display: flex
     flex-direction: column
@@ -56,6 +57,7 @@ const props = withDefaults(
     &.grayed
         background-color: var(--color-bg-4)
         color: var(--color-dark-b)
+        border: 1px var(--color-border-1) solid
 
         .day
             .numeral-prefix

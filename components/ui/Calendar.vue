@@ -1,6 +1,9 @@
 <template>
-    <div class="ui-calendar">
-        <div class="title">March 2023</div>
+    <div class="ui-calendar" ref="uiCalendar">
+        <div class="title">
+            <div class="month">March 2023</div>
+            <div class='group'>Your Selected Schedule</div>
+        </div>
         <template v-for="dayOfWeek in daysOfWeek">
             <div class="day-of-week">{{ dayOfWeek }}</div>
         </template>
@@ -9,11 +12,33 @@
                 <UiCalendarDay :day="day" />
             </template>
         </template>
-        <!-- <UiCalendarDay /> -->
     </div>
+    <p style="font-family:Catamaran;"><i>Central Time Zone</i></p>
 </template>
 
 <script setup lang="ts">
+
+enum EntryState {
+    Starred,
+    Selected,
+    Hovered,
+    Deselected
+}
+enum EntryLocationType {
+    Virtual,
+    InPerson
+}
+
+const entries = [
+    {
+        month: 2,
+        day: 7,
+        state: EntryState.Starred,
+        locationType: EntryLocationType,
+        text: 'Class',
+        time: '7:00pm'
+    }
+]
 
 const daysOfWeek = ref(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
 
@@ -71,31 +96,58 @@ if (days.slice(-1).length !== 0) {
 
 const treeOfDays = ref(days);
 
+const weeks = days.length
+console.log(weeks)
+
+// const weeksAccountedForInCss = 4
+// const additionalWeeksNeeded = weeks - weeksAccountedForInCss
+const additionalRems = ' 7rem'.repeat(weeks)
+console.log(additionalRems)
+
+const newStyle = `3.2rem 2rem` + additionalRems
+console.log(newStyle)
+
+const uiCalendar = ref(null)
+onMounted(() => {
+    if (uiCalendar.value) {
+        console.log('OK OKOK')
+        // @ts-ignore
+        uiCalendar.value.style.gridAutoRows = newStyle
+    }
+})
+
 </script>
 
 <style scoped lang="sass">
 .ui-calendar
     margin-top: 4rem
     display: grid
-    grid-template-rows: 3.2rem 2rem 7rem 7rem 7rem 7rem 7rem 7rem
+    grid-auto-rows: 3.2rem 2rem 7rem 7rem 7rem 7rem
     grid-template-columns: repeat(7, 1fr)
-    border: 1px var(--color-border-1) solid
-    border-radius: 6px
+    // border: 1px var(--color-border-1) solid
+    // border-radius: 6px
     overflow: hidden
 
     .title
         grid-column: 1 / 8
         background-color: var(--color-bg-4)
         display: flex
-        justify-content: flex-start
+        justify-content: space-between
         align-items: center
         font-family: 'Catamaran'
         padding: 1rem
         font-size: 1.3rem
         font-weight: 500
+        border: 1px var(--color-border-1) solid
+
+        .group
+            color: var(--color-brand-1)
+            font-size: 1.2rem
+            font-weight: 600
 
     .day-of-week
-        box-shadow: 0 0 0 .5px var(--color-border-1)
+        // box-shadow: 0 0 0 1px var(--color-border-1)
+        border: 1px var(--color-border-1) solid
         font-family: 'Catamaran'
         text-align: center
         // background-color: var(--color-bg-4)

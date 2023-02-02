@@ -19,9 +19,11 @@
     box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
     margin: 0 auto
     position: relative
+    // padding: 1rem
     .enroll-body
         max-width: 1200px
         margin: 0 auto
         padding-top: 1rem
+        padding: 1rem
 
 </style>
