@@ -92,7 +92,7 @@
             justify-content: space-between
             align-items: stretch
             .center-line
-                border-top: 1px var(--color-dark-b) solid
+                border-top: 1px var(--color-dark-c) solid
                 flex: 1
                 position: relative
                 top: 12px

@@ -61,7 +61,7 @@
         .start-date
             width: 20rem
             height: 20rem
-            // border: 1px var(--color-dark-c) solid
+            // border: 1px var(--color-dark-d) solid
             box-shadow: 0 0 8px 3px rgba( 40, 40, 40, 0.1)
             padding: .8rem
             box-sizing: border-box

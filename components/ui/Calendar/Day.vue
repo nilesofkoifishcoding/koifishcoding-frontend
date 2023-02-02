@@ -1,6 +1,11 @@
 <template>
-    <div class="calendar-day">
-        <div class="day">{{ props.day }}</div>
+    <div :class="['calendar-day', props.day.isGrayed && 'grayed']">
+        <div class="day">
+            <span class="numeral-prefix" v-if="props.day.numeralPrefix">{{
+                props.day.numeralPrefix
+            }}</span>
+            {{ props.day.numeral }}
+        </div>
     </div>
 </template>
 
@@ -24,10 +29,14 @@ interface DayEntry {
 //         isToday: false,
 //     }
 // )
-
+type CalendarDay = {
+    numeral: number,
+    isGrayed?: boolean,
+    numeralPrefix?: string
+}
 const props = withDefaults(
     defineProps<{
-        day: number
+        day: CalendarDay
     }>(),
     {}
 )
@@ -44,5 +53,15 @@ const props = withDefaults(
 
     display: flex
     flex-direction: column
+
+    &.grayed
+        background-color: var(--color-bg-4)
+        color: var(--color-dark-b)
+
+        .day
+            .numeral-prefix
+                position: relative
+                top: 1px
+                margin-right: 5px
 
 </style>
