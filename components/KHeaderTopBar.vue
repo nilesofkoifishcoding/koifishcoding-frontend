@@ -34,7 +34,7 @@ nuxtApp.hook('page:finish', () => {
     left: 0
     right: 0
     height: 33px
-    // background-color: var(--color-bg-1)
+    background-color: var(--color-white)
     z-index: 1
 
     display: flex

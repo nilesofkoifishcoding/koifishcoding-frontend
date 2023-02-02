@@ -2,9 +2,9 @@
     <div class="enroll-hero">
         <div class="overlay"></div>
         <div class="text-overlay">
-            <h2 style="display: none;">101 - Developer Fundamentals</h2>
+            <h2>101 - Developer Fundamentals</h2>
             <h1><span>F</span>ull Stack Developer Program</h1>
-            <div class="points" style="display: none;">
+            <div class="points">
                 <div class="point">
                     <div class="left-point">Program Length</div>
                     <div class="center-line"></div>
@@ -92,7 +92,7 @@
             justify-content: space-between
             align-items: stretch
             .center-line
-                border-top: 1px var(--color-dark-a) solid
+                border-top: 1px var(--color-dark-b) solid
                 flex: 1
                 position: relative
                 top: 12px

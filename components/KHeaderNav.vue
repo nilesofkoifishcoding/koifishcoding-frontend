@@ -15,7 +15,7 @@
     left: 0
     right: 0
     border-bottom: 1px solid var(--color-border-1)
-    background-color: white
+    background-color: var(--color-white)
     z-index: 1
     padding: 0 10px
 

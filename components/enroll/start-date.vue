@@ -1,9 +1,12 @@
 <template>
     <div class="enroll-start-date">
-        <h5>Session Selection</h5>
-        <h3>Choose a Start Date & Schedule</h3>
-        <p>The following sessions teach <b>the same exact content</b>. Choose the start date & schedule that
-            best suits your schedule. Koi Fish Coding exists to work around your schedule to transition you into a
+        <h5>Group Selection</h5>
+        <h3>Choose a Group</h3>
+        <p>The following groups teach <b>the same exact content</b>. The groups meet separately so that you're always
+            in small classes with personalized attention. <u>Choose the start date & schedule that
+                best suits your schedule.</u>
+        </p>
+        <p>Koi Fish Coding exists to work around your schedule to transition you into a
             coding career without interferring with your existing commitments. Be mindful that the virtual & in-person
             sessions are all mandatory, and no sessions will be recorded.
         </p>
@@ -58,7 +61,7 @@
         .start-date
             width: 20rem
             height: 20rem
-            // border: 1px var(--color-dark-b) solid
+            // border: 1px var(--color-dark-c) solid
             box-shadow: 0 0 8px 3px rgba( 40, 40, 40, 0.1)
             padding: .8rem
             box-sizing: border-box

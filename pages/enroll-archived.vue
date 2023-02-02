@@ -86,7 +86,7 @@ nuxtApp.hook('page:finish', () => {
                 box-shadow: 0 0 8px 1px inset none
                 transition: box-shadow 0.2s cubic-bezier(.4,0,.2,1)
                 // &:hover
-                //     box-shadow: 0 0 8px 1px inset var(--color-dark-a)
+                //     box-shadow: 0 0 8px 1px inset var(--color-dark-b)
                 //     cursor: pointer
                 //     transition: box-shadow 0.2s cubic-bezier(.4,0,.2,1)
                 .icon
