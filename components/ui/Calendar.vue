@@ -2,7 +2,7 @@
     <div class="ui-calendar" ref="uiCalendar">
         <div class="title">
             <div class="month">March 2023</div>
-            <div class='group'>Your Selected Schedule</div>
+            <div class='group'>{{ props.rightText }}</div>
         </div>
         <template v-for="dayOfWeek in daysOfWeek">
             <div class="day-of-week">{{ dayOfWeek }}</div>
@@ -17,6 +17,9 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps<{
+    rightText: string
+}>()
 
 enum EntryState {
     Starred,
@@ -101,7 +104,7 @@ console.log(weeks)
 
 // const weeksAccountedForInCss = 4
 // const additionalWeeksNeeded = weeks - weeksAccountedForInCss
-const additionalRems = ' 7rem'.repeat(weeks)
+const additionalRems = ' 6.5rem'.repeat(weeks)
 console.log(additionalRems)
 
 const newStyle = `3.2rem 2rem` + additionalRems
@@ -110,7 +113,6 @@ console.log(newStyle)
 const uiCalendar = ref(null)
 onMounted(() => {
     if (uiCalendar.value) {
-        console.log('OK OKOK')
         // @ts-ignore
         uiCalendar.value.style.gridAutoRows = newStyle
     }
@@ -122,7 +124,7 @@ onMounted(() => {
 .ui-calendar
     margin-top: 4rem
     display: grid
-    grid-auto-rows: 3.2rem 2rem 7rem 7rem 7rem 7rem
+    grid-auto-rows: 3.2rem 2rem 6.5rem 6.5rem 6.5rem 6.5rem
     grid-template-columns: repeat(7, 1fr)
     // border: 1px var(--color-border-1) solid
     // border-radius: 6px
@@ -142,7 +144,7 @@ onMounted(() => {
 
         .group
             color: var(--color-brand-1)
-            font-size: 1.2rem
+            font-size: 1.5rem
             font-weight: 600
 
     .day-of-week

@@ -4,7 +4,7 @@
         <div class="text-overlay">
             <h2>101 - Developer Fundamentals</h2>
             <h1><span>F</span>ull Stack Developer Program</h1>
-            <div class="points">
+            <div class="points" style="display: none;">
                 <div class="point">
                     <div class="left-point">Program Length</div>
                     <div class="center-line"></div>

@@ -10,33 +10,45 @@
             coding career without interferring with your existing commitments. Be mindful that the virtual & in-person
             sessions are all mandatory, and no sessions will be recorded.
         </p>
-        <div class="start-dates">
-            <div class="start-date selected">
-                <div class="top">
-                    <div class="subdate">Monday, March</div>
-                    <div class="date">2</div>
-                    <div class="time">6:30pm CST</div>
+        <div class="s-dates">
+            <div :class="['s-date', group.id === props.selectedGroupId && 'selected']" v-for="group in groups"
+                :key="group.id" @click="groupSelected(group)">
+                <div class="radio">
+                    <div class="circle"></div>
                 </div>
-            </div>
-            <div class="start-date">
-                <div class="top">
-                    <div class="subdate">Tuesday, March</div>
-                    <div class="date">3</div>
-                    <div class="time">6:30pm CST</div>
+                <div class="text">
+                    <div class="start-date">
+                        <span>Start Date:</span>
+                        <span>{{ group.startDate }}</span>
+                    </div>
+                    <div class="times">
+                        <span v-for="sessionTemplate in group.sessionTemplates">
+                            <span>{{ sessionTemplate.description }}</span>&nbsp;
+                            <span class='location'>{{ sessionTemplate.location }}</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="start-date">
-                <div class="top">
-                    <div class="subdate">Tuesday, March</div>
-                    <div class="date">4</div>
-                    <div class="time">7:30pm CST</div>
-                </div>
+                <div class="letter">{{ group.letter }}</div>
             </div>
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { Group } from '~~/models/groups';
+
+const props = defineProps<{
+    groups: Group[],
+    selectedGroupId: number | null,
+}>()
+const emit = defineEmits<{
+    (e: 'groupSelected', id: number): void
+}>()
+
+function groupSelected(group: Group) {
+    emit('groupSelected', group.id)
+}
+
 </script>
 
 <style lang="sass" scoped>
@@ -54,10 +66,83 @@
         margin-top: .8rem
         margin-bottom: 2rem
     
+    .s-dates
+        .s-date
+            display: flex
+            margin-bottom: 1rem
+            padding: .8rem 0
+
+            border: 1px var(--color-dark-c) solid
+            border-radius: 4px
+
+            .radio
+                width: 3rem
+                display: flex
+                justify-content: center
+                align-items: center
+
+                .circle
+                    width: 1rem
+                    height: 1rem
+                    background-color: var(--color-brand-1)
+                    border-radius: 50%
+
+                    background-color: transparent
+                    border: 1px var(--color-dark-b) solid
+
+            .text
+                flex: 1
+                .start-date
+                    font-weight: 600
+                    span:nth-child(1)
+                        margin-right: 0.4rem
+                .times
+                    flex: 1
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    display: flex
+                    @media screen and (max-width: $breakpoint-medium)
+                        align-items: flex-start
+                        flex-direction: column
+                        span:nth-child(2)
+                            margin-top: .25rem
+                            margin-bottom: .25rem
+                    & > span
+                        // box-shadow: 0 0 4px 2px var(--color-dark-d)
+                        padding: 0.1rem 0.3rem 0.1rem 0
+                        border-radius: 4px
+                        margin-right: 2rem
+                    
+                    .location
+                        font-weight: 500
+            .letter
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 3rem
+                font-weight: 900
+                color: var(--color-dark-b)
+                font-size: 1.5rem
+
+            @media screen and (min-width: $breakpoint-medium)
+                &:hover
+                    cursor: pointer
+                    border: 1px var(--color-brand-2a) solid
+
+            &.selected
+                border: 1px var(--color-brand-1) solid
+                .radio .circle
+                    border-width: 0px
+                    background-color: var(--color-brand-1)
+                .letter
+                    color: var(--color-brand-1)
+
     .start-dates
         margin-top: 2rem
         display: flex
         justify-content: space-between
+        display: none
         .start-date
             width: 20rem
             height: 20rem
