@@ -1,10 +1,12 @@
+import { SessionLocationType, Session } from "./sessions"
 import { SessionTemplate } from "./sessionTemplates"
 
 export type Group = {
     id: number,
     letter: string,
     startDate: string,
-    sessionTemplates: SessionTemplate[]
+    sessionTemplates: SessionTemplate[],
+    sessions: Session[]
 }
 
 export const groupData: Group[] = [
@@ -25,6 +27,26 @@ export const groupData: Group[] = [
                 description: 'Every Saturday @ 10:00am',
                 location: 'In-Person'
             }
+        ],
+        sessions: [
+            {
+                id: 1,
+                date: '2023-03-06',
+                time: '7:00pm',
+                locationType: SessionLocationType.Virtual
+            },
+            {
+                id: 2,
+                date: '2023-03-08',
+                time: '7:00pm',
+                locationType: SessionLocationType.Virtual
+            },
+            {
+                id: 3,
+                date: '2023-03-11',
+                time: '10:00am',
+                locationType: SessionLocationType.InPerson
+            }
         ]
     },
     {
@@ -43,6 +65,26 @@ export const groupData: Group[] = [
             {
                 description: 'Every Saturday @ 10:00am',
                 location: 'In-Person'
+            }
+        ],
+        sessions: [
+            {
+                id: 4,
+                date: '2023-03-07',
+                time: '8:00pm',
+                locationType: SessionLocationType.Virtual
+            },
+            {
+                id: 5,
+                date: '2023-03-09',
+                time: '8:00pm',
+                locationType: SessionLocationType.Virtual
+            },
+            {
+                id: 6,
+                date: '2023-03-11',
+                time: '10:00am',
+                locationType: SessionLocationType.InPerson
             }
         ]
     },
@@ -63,6 +105,7 @@ export const groupData: Group[] = [
                 description: 'Every Saturday @ 11:30am',
                 location: 'In-Person'
             }
-        ]
+        ],
+        sessions: []
     },
 ]

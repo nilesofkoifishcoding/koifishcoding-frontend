@@ -5,7 +5,7 @@
         <div class="enroll-body">
             <EnrollStartDate :groups="groupData" :selected-group-id="selectedGroupId"
                 @group-selected="onGroupSelected" />
-            <UiCalendar :right-text="selectedGroup?.letter" />
+            <UiCalendar :selected-group="selectedGroup" />
             <div style="height: 1000px"></div>
         </div>
     </div>
@@ -16,7 +16,7 @@ import { groupData } from '../models/groups'
 
 const selectedGroupId = ref<number | null>(null)
 const selectedGroup = computed(() => {
-    return groupData.find((group) => group.id === selectedGroupId.value)
+    return groupData.find((group) => group.id === selectedGroupId.value) || null
 })
 
 function onGroupSelected(groupId: number) {

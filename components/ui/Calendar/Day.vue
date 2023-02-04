@@ -7,16 +7,19 @@
             {{ props.day.numeral }}
         </div>
         <div class="space" style="flex: 1 0 auto;"></div>
-        <div class="entries-wrapper" v-if="[6, 13, 23].includes(props.day.numeral)">
+        <div class="entries-wrapper" v-if="props.session?.date === day.date">
             <div class="entry">
                 <div class="icon">
-                    <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-location-dot']" />
+                    <font-awesome-icon v-if="loaded && session?.locationType === SessionLocationType.InPerson"
+                        :icon="['fas', 'fa-location-dot']" />
+                    <font-awesome-icon v-else-if="loaded && session?.locationType === SessionLocationType.Virtual"
+                        :icon="['fas', 'fa-video']" />
                 </div>
                 <div class="text">
                     <!-- <span>Class</span> -->
                 </div>
                 <div class="time">
-                    <span>7:00pm</span>
+                    <span>{{ session?.time }}</span>
                 </div>
             </div>
         </div>
@@ -25,6 +28,9 @@
 </template>
 
 <script setup lang="ts">
+import { CalendarDay } from '~~/models/frontend/calendarDay';
+import { Session, SessionLocationType } from '~~/models/sessions';
+
 interface DayEntry {
     title: string,
     time: string,
@@ -44,14 +50,10 @@ interface DayEntry {
 //         isToday: false,
 //     }
 // )
-type CalendarDay = {
-    numeral: number,
-    isGrayed?: boolean,
-    numeralPrefix?: string
-}
 const props = withDefaults(
     defineProps<{
-        day: CalendarDay
+        day: CalendarDay,
+        session: Session | null
     }>(),
     {}
 )

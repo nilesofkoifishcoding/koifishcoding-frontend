@@ -1,15 +1,17 @@
 <template>
     <div class="ui-calendar" ref="uiCalendar">
+        <div v-if="!props.selectedGroup?.id" class="overlay">Choose a Group to See the Schedule</div>
         <div class="title">
             <div class="month">March 2023</div>
-            <div class='group'>{{ props.rightText }}</div>
+            <div class='group'>{{ props.selectedGroup?.letter }}</div>
         </div>
         <template v-for="dayOfWeek in daysOfWeek">
             <div class="day-of-week">{{ dayOfWeek }}</div>
         </template>
         <template v-for="week in treeOfDays">
-            <template v-for="day in week">
-                <UiCalendarDay :day="day" />
+            <template v-for="day in week" :key="day.date">
+                <UiCalendarDay :day="day"
+                    :session="props.selectedGroup?.sessions.find(x => x.date === day.date) || null" />
             </template>
         </template>
     </div>
@@ -17,8 +19,11 @@
 </template>
 
 <script setup lang="ts">
+import { CalendarDay } from '~~/models/frontend/calendarDay';
+import { Group } from '~~/models/groups';
+
 const props = defineProps<{
-    rightText: string
+    selectedGroup: Group | null
 }>()
 
 enum EntryState {
@@ -43,10 +48,10 @@ const entries = [
     }
 ]
 
-const daysOfWeek = ref(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
+const daysOfWeek = ref(['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']);
 
 const year = '2023'
-const month = '02'
+const month = '03'
 const dateStr = `${year}-${month}-01T00:00:00`
 const date = new Date(dateStr)
 const daysInCurrentMonth = new Date(parseInt(year), parseInt(month), 0).getDate()
@@ -56,25 +61,23 @@ const daysInPreviousMonth = new Date(parseInt(year), parseInt(month) - 1, 0).get
 const sundayDate = (daysInPreviousMonth - (date.getDay() - 1))
 const daysNeededToBackfillBeginning = daysInPreviousMonth - sundayDate
 
-type CalendarDay = {
-    numeral: number,
-    isGrayed?: boolean,
-    numeralPrefix?: string
-}
+
 let days: CalendarDay[][] = [[]]
 
 function fillDaysWithBackfill() {
     for (let i = sundayDate; i <= daysInPreviousMonth; i++) {
-        days[0] = [...days[0], { numeral: i, isGrayed: true }]
+        const date = `${year}-${(parseInt(month) - 1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`
+        days[0] = [...days[0], { numeral: i, date: date, isGrayed: true }]
     }
 }
 function fillInMonthDays() {
     for (let i = 1; i <= daysInCurrentMonth; i++) {
         const [latestWeek] = days.slice(-1)
+        const date = `${year}-${month}-${i.toString().padStart(2, '0')}`
         if (latestWeek.length === 7) {
-            days = [...days, [{ numeral: i }]]
+            days = [...days, [{ numeral: i, date: date }]]
         } else {
-            days = [...days.slice(0, -1), [...latestWeek, { numeral: i }]]
+            days = [...days.slice(0, -1), [...latestWeek, { numeral: i, date }]]
         }
     }
 }
@@ -82,7 +85,8 @@ function fillInMonthDays() {
 function fillInNextMonth(num: number) {
     let [lastWeek] = days.slice(-1)
     for (let i = 1; i <= num; i++) {
-        lastWeek = [...lastWeek, { numeral: i, isGrayed: true, numeralPrefix: i === 1 ? 'April' : '' }]
+        const date = `${year}-${(parseInt(month) + 1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`
+        lastWeek = [...lastWeek, { numeral: i, isGrayed: true, numeralPrefix: i === 1 ? 'April' : '', date }]
     }
     days = [...days.slice(0, -1), lastWeek]
 }
@@ -122,13 +126,36 @@ onMounted(() => {
 
 <style scoped lang="sass">
 .ui-calendar
-    margin-top: 4rem
+    margin-top: 2rem
     display: grid
     grid-auto-rows: 3.2rem 2rem 6.5rem 6.5rem 6.5rem 6.5rem
-    grid-template-columns: repeat(7, 1fr)
+    // grid-template-col
+    grid-template-columns: repeat(7, calc(100%/7))
     // border: 1px var(--color-border-1) solid
     // border-radius: 6px
-    overflow: hidden
+    // overflow: hidden
+    // z-index: 5
+    position: relative
+    z-index: -1
+
+    .overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: var(--color-white-b)
+        z-index: 2
+
+        font-family: 'Catamaran'
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 600
+        font-size: 1.1rem
+        color: var(--color-dark-a)
+
+        backdrop-filter: blur(6px)
 
     .title
         grid-column: 1 / 8
