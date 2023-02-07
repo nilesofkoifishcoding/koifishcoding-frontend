@@ -29,7 +29,7 @@ export default defineNuxtConfig({
                 // 'Lilita+One': true,
                 // 'Heebo': true,
                 'Lexend Mega': [200, 300, 400, 500, 600, 700],
-                'Catamaran': [300, 400, 500, 600, 700],
+                'Catamaran': [100, 200, 300, 400, 500, 600, 700],
                 Montserrat: [400, 500, 600, 700]
             }
         }]
