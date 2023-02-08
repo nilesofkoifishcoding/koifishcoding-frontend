@@ -1,5 +1,5 @@
 <template>
-    <div class="hero">
+    <div :class="['hero', props.transparentBg && 'transparent']">
         <div class="overlay2">
 
         </div>
@@ -63,10 +63,19 @@
             <p></p>
             <p></p>
         </div>
+        <div class="overlay-3" v-if="props.transparentBg"></div>
     </div>
 </template>
 
 <script lang="ts" setup>
+const props = withDefaults(
+    defineProps<{
+        transparentBg?: boolean
+    }>(),
+    {
+        transparentBg: undefined
+    }
+)
 const loaded = ref(false);
 const nuxtApp = useNuxtApp()
 
@@ -110,9 +119,7 @@ $inset: 0
     .overlay
         position: absolute
         top: $inset
-        // left: 50%
         left: $inset
-        // width: 100%
         right: $inset
         bottom: $inset
         overflow: hidden
@@ -161,5 +168,19 @@ $inset: 0
                 line-height: 11px
                 font-size: .7rem
                 // color: var(--color-dark-c)
+    
+    .overlay-3
+        position: absolute
+        top: $inset
+        left: $inset
+        right: $inset
+        bottom: $inset
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.0))
+
+    &.transparent
+        border: none
+        
+        .overlay
+            background-color: transparent
         
 </style>

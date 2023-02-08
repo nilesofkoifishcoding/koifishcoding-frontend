@@ -20,6 +20,7 @@
 //     z-index: -1
 .root
     height: 90vh
+    // background-image: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
 .sessions, .weeks
     color: rgb(30, 30, 30)
     font-size: 80px

@@ -1,5 +1,5 @@
 <template>
-    <div class="top-bar">
+    <div :class="['top-bar', props.transparentBg && 'transparent']">
         <div class="call">
             <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-phone']" />
             <span class="number">(615) 382-3829</span>
@@ -19,6 +19,17 @@
 </template>
 
 <script lang="ts" setup>
+const props = withDefaults(
+    defineProps<{
+        transparentBg?: boolean
+    }>(),
+    {
+        transparentBg: undefined
+    }
+)
+const backgroundColor = computed(() => {
+    return props.transparentBg ? 'transparent' : undefined
+})
 const loaded = ref(false);
 const nuxtApp = useNuxtApp();
 
@@ -48,6 +59,9 @@ nuxtApp.hook('page:finish', () => {
     padding: 0 10px
     color: var(--color-brand-3)
     font-size: 0.85rem
+
+    &.transparent
+        background-color: transparent
 
     @media screen and (max-width: $breakpoint-small)
         justify-content: space-between

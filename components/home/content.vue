@@ -49,6 +49,12 @@ console.log('hey')
     position: relative
     display: flex
     z-index: 0
+
+    background-image: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    
     & > div
         width: 50%
     .header-content
@@ -86,6 +92,7 @@ console.log('hey')
         grid-template-columns: repeat(2, 60%)
         grid-template-rows: repeat(6, 150px)
         position: relative
+        opacity: 0
 
         .excellence-panel
             position: absolute
