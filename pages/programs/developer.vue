@@ -18,6 +18,9 @@
     box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
     margin: 0 auto
     position: relative
+
+    // background: linear-gradient(0deg, rgba(229,41,73,0) 60%, rgba(40,40,40,1) 100%)
+    
     h1
         font-family: 'Catamaran'
         margin-left: 1rem

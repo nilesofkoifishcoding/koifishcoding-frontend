@@ -37,6 +37,8 @@ nuxtApp.hook('page:finish', () => {
     background-color: var(--color-white)
     z-index: 1
 
+    // background-color: transparent
+
     display: flex
     justify-content: flex-end
     align-items: center
