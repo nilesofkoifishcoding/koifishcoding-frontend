@@ -45,7 +45,7 @@ nuxtApp.hook('page:finish', () => {
     left: 0
     right: 0
     height: 33px
-    background-color: var(--color-white)
+    background-color: var(--color-bg-1)
     z-index: 1
 
     // background-color: transparent

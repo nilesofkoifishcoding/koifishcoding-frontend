@@ -32,10 +32,11 @@
         width: 100%
         height: 40rem
         // background-image: url('https://images.unsplash.com/photo-1675845626804-f952953bea7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
-        background-image: url('https://images.unsplash.com/photo-1674708202031-7b0c69ed5671?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80')
+        // background-image: url('https://images.unsplash.com/photo-1674708202031-7b0c69ed5671?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80')
+        background-image: url('https://images.unsplash.com/photo-1473172707857-f9e276582ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
         // border: 1px red solid
         opacity: 1
-        background-position: center 40%
+        background-position: center 5%
         background-size: cover
         // mix-blend-mode: multiply
 

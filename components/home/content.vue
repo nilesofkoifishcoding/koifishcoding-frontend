@@ -4,12 +4,25 @@
             <div class="content">
                 <div class="aux-heading">Next Class Starts: Feburary 6<sup>th</sup>, 2023</div>
                 <div class="heading">
-                    <span>Koi Fish Coding is</span>
-                    <span>Coming to <span style="color: #e52949">Nashville</span></span>
+                    <span>Koi Fish Coding</span>
+                    <span>in <span class="nashville">Nashville</span></span>
                 </div>
+                <div class="description">
+                    Koi Fish Coding was founded by <span class="name">Niles Brandon</span> to empower, inspire, and
+                    create future programmers for
+                    challenges of tomorrow.
+                </div>
+                <div class="invest">
+                    <span>Enroll in Developer 101</span>
+                    <span class="button-container">
+                        <font-awesome-icon :icon="['fas', 'fa-circle-right']" />
+                    </span>
+                </div>
+                <div class="explore">Explore the Full Stack Developer Program</div>
             </div>
         </div>
-        <div class="bg-images">
+        <HomeHeroTyping />
+        <div class="bg-images" v-if="false">
             <!-- <div class="excellence-panel"><img src="~/assets/jpgs/excellence-sushi.png" alt="" /></div> -->
             <div class="panel"><img src="~/assets/jpgs/html-sushi-3.png" alt="" /></div>
             <div class="panel"></div>
@@ -50,16 +63,22 @@ console.log('hey')
     display: flex
     z-index: 0
 
-    background-image: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
+    // background-image: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
+    // background-repeat: no-repeat
+    // background-position: center
+    // background-size: cover
+
+    background-image: url('~/assets/jpgs/cubes.png')
+
+    @media screen and (max-width: $breakpoint-medium)
+        background-position: left
     
     & > div
         width: 50%
     .header-content
         display: flex
         align-items: center
+        width: 55%
         .content
             padding-left: 150px
             .aux-heading
@@ -67,10 +86,10 @@ console.log('hey')
                 color: var(--color-brand-1)
                 font-weight: 600
                 font-size: 1.2rem
-                margin-bottom: 1.5rem
+                margin-bottom: 1rem
                 margin-left: 2px
             .heading
-                margin-top: 2rem
+                margin-top: 1.5rem
                 font-family: 'Montserrat'
                 font-family: 'Catamaran'
                 color: var(--color-brand-3)
@@ -81,10 +100,102 @@ console.log('hey')
                 font-weight: 700
                 flex-direction: column
                 letter-spacing: -.1rem
-                span
+                & > span
                     line-height: 5.5rem
                     &:nth-child(1)
                         margin-left: -1px
+                        // color: var(--color-brand-1)
+            
+            .description
+                // border: 1px red solid
+                padding-right: 1rem
+                font-family: 'Catamaran'
+                font-size: 1.1rem
+                font-weight: 400
+                line-height: 1.5rem
+
+                .name
+                    font-weight: 600
+                    // text-decoration: underline
+                    // color: var(--color-brand-1)
+            
+            .invest
+                margin-top: 1.5rem
+                font-family: 'Catamaran'
+                width: 18rem
+                height: 3rem
+                background-color: var(--color-button-1)
+
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 1.2rem
+                font-weight: 600
+                border-radius: 5px
+                box-shadow: 0 8px 7px 1px var(--color-dark-d)
+                color: var(--color-white)
+                border: none
+                position: relative
+                top: 0
+                transition: all 0.15s cubic-bezier(.4,0,.2,1)
+                z-index: 0
+
+                &:hover
+                    cursor: pointer
+                    position: relative
+                    top: -4px
+                    transition: all 0.15s cubic-bezier(.4,0,.2,1)
+                    box-shadow: 0 10px 14px 1px var(--color-dark-d)
+                
+                .button-container
+                    right: 0
+                    position: absolute
+                    // opacity: 0
+                    transition: all 0.15s cubic-bezier(.4,0,.2,1)
+                    color: var(--color-button-1)
+                &:hover .button-container
+                    position: absolute
+                    right: -40px
+                    color: var(--color-button-1)
+                    opacity: 1
+                    transition: all 0.15s cubic-bezier(.4,0,.2,1)
+
+            .explore
+                color: var(--color-button-1)
+                font-family: 'Catamaran'
+                font-weight: 600
+                margin-top: 1rem
+                text-decoration: underline
+                cursor: pointer
+
+    @media screen and (max-width: $breakpoint-medium)
+        flex-direction: column-reverse
+        align-items: center
+        
+        .header-content
+            text-align: center
+            width: auto
+            padding: 1rem
+            box-sizing: border-box
+            height: 75%
+            .content
+                padding-left: 0
+
+                .heading
+                    align-items: center
+                    font-size: 3.2rem
+                    margin: 1.6rem 0
+                    & > span
+                        line-height: 3.1rem
+                    
+                .description
+                    // margin-bottom: 3rem
+                    padding-right: unset
+                    width: 80%
+                    margin: 0 auto 2rem
+                
+                .invest
+                    margin: 1rem auto 2rem
                         
     .bg-images
         width: 30%
@@ -92,7 +203,7 @@ console.log('hey')
         grid-template-columns: repeat(2, 60%)
         grid-template-rows: repeat(6, 150px)
         position: relative
-        opacity: 0
+        // opacity: 0
 
         .excellence-panel
             position: absolute

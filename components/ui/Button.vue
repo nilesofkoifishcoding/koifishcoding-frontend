@@ -1,7 +1,7 @@
 <template>
     <NuxtLink to="/enroll">
         <button>
-            <span class="text">Enroll Now</span>
+            <span class="text">Enroll</span>
         </button>
     </NuxtLink>
 </template>
@@ -12,30 +12,31 @@ a
 button
     border: none
     outline: none
-    padding: 0 .6rem
+    padding: 0 .9rem
     height: 2.25rem
     color: white
 
-    background-color: var(--color-white)
-    border: 1px var(--color-brand-1) solid
-    color: var(--color-brand-1)
+    background-color: var(--color-button-1)
+    border: 2px var(--color-button-1) solid
+    border-radius: 3px
+    color: var(--color-white)
 
     display: flex
     justify-content: center
     align-items: center
 
     font-family: 'Montserrat'
-    font-size: 1rem
+    font-size: 0.9rem
     font-weight: 600
     text-decoration: none
 
-    transition: background-color .3s ease
+    transition: all 0.2s cubic-bezier(.4,0,.2,1)
 
     &:hover
         cursor: pointer
 
-        background-color: var(--color-brand-1)
+        background-color: var(--color-button-1-darker)
         color: var(--color-white)
 
-        transition: background-color .3s ease
+        transition: all 0.2s cubic-bezier(.4,0,.2,1)
 </style>
