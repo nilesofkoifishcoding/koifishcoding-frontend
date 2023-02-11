@@ -9,9 +9,9 @@
 <script setup lang="ts">
 
 const html = ref(`<span style="color: red;">&lt;html&gt;</span>
-    &lt;head&gt;
-        &lt;title&gt;Koi Fish Coding&lt;/title&gt;
-    &lt;/head&gt;
+  &lt;head&gt;
+    &lt;title&gt;Koi Fish Coding&lt;/title&gt;
+  &lt;/head&gt;
 &lt;/html&gt;`)
 
 console.log(html.value[0])
@@ -25,7 +25,7 @@ console.log(html.value[0])
     justify-content: center
     align-items: center
     flex: 1
-    display: none
+    // display: none
     .screen
         width: 60%
         height: 70%

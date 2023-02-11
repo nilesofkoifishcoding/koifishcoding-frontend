@@ -10,7 +10,7 @@
                 <div class="description">
                     Koi Fish Coding was founded by <span class="name">Niles Brandon</span> to empower, inspire, and
                     create future programmers for
-                    challenges of tomorrow.
+                    the challenges of tomorrow.
                 </div>
                 <div class="invest">
                     <span>Enroll in Developer 101</span>
@@ -81,6 +81,8 @@ console.log('hey')
         width: 55%
         .content
             padding-left: 150px
+            @media screen and (max-width: $breakpoint-large)
+                    padding-left: 60px
             .aux-heading
                 font-family: 'Montserrat'
                 color: var(--color-brand-1)
@@ -180,6 +182,9 @@ console.log('hey')
             height: 75%
             .content
                 padding-left: 0
+
+                .aux-heading
+                    font-size: 1rem
 
                 .heading
                     align-items: center
