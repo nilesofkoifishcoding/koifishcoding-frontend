@@ -41,7 +41,8 @@
         </div>
     </div>
     <div class="tools">Something</div>
-    <HomeHeroSubMain />
+    <!-- <HomeHeroSubMain /> -->
+    <HomeWhatWeDo />
     <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
     <HomeHowItWorks v-if="false" />
     <div class="pricing">

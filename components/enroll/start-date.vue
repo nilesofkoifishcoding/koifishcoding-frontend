@@ -3,8 +3,8 @@
         <h5>Group Selection</h5>
         <h3>Choose a Group</h3>
         <p>The following groups teach <b>the same exact content</b>. The groups meet separately so that you're always
-            in small classes with personalized attention. <u>Choose the start date & schedule that
-                best suits your schedule.</u>
+            in small classes with personalized attention. <b>Choose the start date & schedule that
+                best suits your schedule.</b>
         </p>
         <p>Koi Fish Coding exists to work around your schedule to transition you into a
             coding career without interferring with your existing commitments. Be mindful that the virtual & in-person
@@ -64,9 +64,10 @@ function groupSelected(group: Group) {
         font-weight: 800
         font-size: 1.8rem
         margin-top: .8rem
-        margin-bottom: 2rem
+        margin-bottom: -.5rem
     
     .s-dates
+        margin-top: 2.5rem
         .s-date
             display: flex
             margin-bottom: 1rem

@@ -6,8 +6,12 @@
                 <div class="bottom-border"></div>
             </div>
             <div class="nav-item selected">
-                <span class="text">Courses</span>
+                <span class="text">Curriculum</span>
                 <div class="bottom-border selected"></div>
+            </div>
+            <div class="nav-item">
+                <span class="text">How It Works</span>
+                <div class="bottom-border"></div>
             </div>
             <div class="nav-item">
                 <span class="text">Enroll</span>
