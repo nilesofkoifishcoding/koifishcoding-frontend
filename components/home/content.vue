@@ -2,7 +2,8 @@
     <div class="root">
         <div class="header-content">
             <div class="content">
-                <div class="aux-heading">Next Class Starts: Feburary 6<sup>th</sup>, 2023</div>
+                <!-- <div class="aux-heading">Next Class Starts: Feburary 6<sup>th</sup>, 2023</div> -->
+                <div class="aux-heading">From 0 to Job Offer. Start Programming Now.</div>
                 <div class="heading">
                     <span>Koi Fish Coding</span>
                     <span>in <span class="nashville">Nashville</span></span>

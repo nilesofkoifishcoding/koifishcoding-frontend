@@ -31,7 +31,7 @@ console.log(html.value[0])
         height: 70%
         margin: 0 auto
         box-shadow: 0 0 6px 1px var(--color-dark-d)
-        border-radius: 10px
+        border-radius: 6px
         background-color: rgba(255, 255, 255, 0.2)
         backdrop-filter: blur(3px)
         padding: 1rem
