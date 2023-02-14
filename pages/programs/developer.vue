@@ -21,12 +21,6 @@
     box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
     margin: 0 auto
     position: relative
-
-    // background: linear-gradient(0deg, white, 60%, rgba(255,255,255,0) 60%, rgba(30,30,30,1) 100%)
-    // background-repeat: no-repeat
-
-    // background-color: var(--color-dark)
-    
     .bg-overlay
         position: absolute
         top: 0
@@ -49,7 +43,6 @@
             left: 0
             width: 100%
             height: 40rem
-            // background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.0))
 
     h1
         font-family: 'Catamaran'

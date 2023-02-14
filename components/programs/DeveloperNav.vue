@@ -31,23 +31,24 @@
 .dev-nav
     display: flex
     justify-content: center
-
+    background-color: var(--color-brand-2)
+    color: white
+    height: 4.2rem
     .container
         display: flex
         position: relative
 
         & > .bottom-border
             position: absolute
-            bottom: -10px
+            // bottom: -10px
             left: 0
             right: 0
             height: 2px
             background-color: var(--color-dark-d)
-            // border-radius: 7px
 
         & > .bottom-border-bottom
             position: absolute
-            bottom: -10px
+            // bottom: -10px
             left: -608px
             right: -608px
             height: 2px
@@ -55,7 +56,6 @@
 
         & > .nav-item
             width: 8rem
-            // border: 1px red solid
             text-align: center
 
             font-size: 1.1rem
@@ -69,7 +69,7 @@
 
             & > .bottom-border
                 position: absolute
-                bottom: -10px
+                // bottom: -10px
                 height: 2px
                 left: 0
                 right: 0
