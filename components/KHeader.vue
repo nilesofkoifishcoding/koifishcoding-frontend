@@ -1,6 +1,8 @@
 <template>
-    <KHeaderTopBar :transparent-bg="props.transparentBg" />
-    <KHeaderNav :transparent-bg="props.transparentBg" />
+    <header>
+        <KHeaderTopBar :transparent-bg="props.transparentBg" />
+        <KHeaderNav :transparent-bg="props.transparentBg" />
+    </header>
 </template>
 
 <script setup lang="ts">
@@ -16,6 +18,7 @@ const props = withDefaults(
 
 <style scoped lang="sass">
 header
-    position: relative
-    z-index: 10
+    z-index: 1
+    position: sticky
+    top: 0
 </style>

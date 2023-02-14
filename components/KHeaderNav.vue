@@ -4,15 +4,35 @@
             <NuxtLink to="/" class="main-logo">
                 <img src="~/assets/svgs/koi-fish-coding-logo.svg" alt="Koi Fish Coding Logo" />
             </NuxtLink>
-            <div>
-                <div class="nav-item">Full St<span class="highlight">a</span>ck Developer Program</div>
-                <div class="nav-item">Ins<span class="highlight">t</span>ructor</div>
+            <div class="nav-items">
+                <NuxtLink to="/programs/developer" class="nav-item">
+                    <span>
+                        Full St<span class="highlight">a</span>ck Developer Program
+                    </span>
+                </NuxtLink>
+                <!-- <div class="nav-item"></div> -->
                 <div class="nav-item">
-                    <font-awesome-icon v-if="loaded" class="location highlight" :icon="['fas', 'fa-location-dot']" />
-                    <span>Nashville</span>
+                    <span>
+                        Ins<span class="highlight">t</span>ructor
+                    </span>
                 </div>
-                <div class="nav-item"><span class="highlight">F</span>AQ</div>
-                <UiButton />
+                <div class="nav-item">
+                    <span>
+                        <font-awesome-icon v-if="loaded" class="location highlight"
+                            :icon="['fas', 'fa-location-dot']" />
+                        <span>Nashville</span>
+                    </span>
+                </div>
+                <div class="nav-item">
+                    <span>
+                        <span class="highlight">F</span>AQ
+                    </span>
+                </div>
+                <UiButton text="Enroll" />
+            </div>
+            <div class="mobile-nav-items">
+                <UiButton text="Menu" outline />
+                <UiButton text="Enroll" />
             </div>
         </div>
     </div>
@@ -41,11 +61,9 @@ const props = withDefaults(
     position: relative
     top: 2px
 .k-header-nav
-    position: sticky
-    top: 0
+    // position: sticky
+    // top: 0
     height: 61px
-    left: 0
-    right: 0
     border-bottom: 1px solid var(--color-border-1)
     background-color: var(--color-white)
     z-index: 1
@@ -63,38 +81,57 @@ const props = withDefaults(
         align-items: center
 
         & > div
-            height: 100%
             display: flex
             align-items: center
             position: relative
+
+        & > .mobile-nav-items
+            display: none
+            @media screen and (max-width: $breakpoint-medium-large)
+                display: flex
+
+        & > .nav-items
+            height: 100%
+            @media screen and (max-width: $breakpoint-medium-large)
+                display: none
             .nav-item
                 height: 100%
                 font-family: 'Catamaran'
                 font-size: 1.1rem
                 font-weight: 600
                 color: var(--color-dark-1)
-                // margin-right: 20px
                 display: flex
                 align-items: center
                 padding: 0 1.5rem
-                // text-transform: uppercase
-                // border: 1px red solid
                 letter-spacing: 0.02rem
-                border-bottom: 4px transparent solid
+                border-bottom: 3px transparent solid
+                transition: border-bottom 0.15s cubic-bezier(.4,0,.2,1)
 
-                & > .location
+                @media screen and (max-width: $breakpoint-large-2)
+                    padding: 0 1rem
+
+                & > span
+                    position: relative
+                    top: 1px
+
+                .highlight
+                    color: var(--color-dark-1)
+                    transition: color 0.15s cubic-bezier(.4,0,.2,1)
+
+                & > span .location
                     position: relative
                     top: -1px
                     font-size: 76%
                     margin-right: .3rem
 
                 &:hover
-                    // color: var(--color-brand-4)
                     cursor: pointer
-                    border-bottom: 4px var(--color-brand-4) solid
+                    border-bottom: 3px var(--color-button-1) solid
+                    transition: border-bottom 0.15s cubic-bezier(.4,0,.2,1)
 
                     .highlight
-                        color: var(--color-brand-4)
+                        color: var(--color-button-1)
+                        transition: color 0.15s cubic-bezier(.4,0,.2,1)
 
         img
             width: 17rem

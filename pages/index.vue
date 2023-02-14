@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <KHeader />
+        <!-- <KHeader /> -->
         <HomeContent />
     </div>
 </template>
@@ -10,9 +10,5 @@
 
 <style lang="sass" scoped>
 .index
-    max-width: 1600px
-    box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
-    margin: 0 auto
     position: relative
-
 </style>

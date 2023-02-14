@@ -1,10 +1,22 @@
 <template>
     <NuxtLink to="/enroll">
-        <button>
-            <span class="text">Enroll</span>
+        <button :class="{ outline: props.outline }">
+            <span class="text">{{ props.text }}</span>
         </button>
     </NuxtLink>
 </template>
+
+<script setup lang="ts">
+const props = withDefaults(
+    defineProps<{
+        text: string,
+        outline?: boolean
+    }>(),
+    {
+        outline: false
+    }
+)
+</script>
 
 <style scoped lang="sass">
 a
@@ -32,6 +44,10 @@ button
     text-decoration: none
 
     transition: all 0.2s cubic-bezier(.4,0,.2,1)
+
+    &.outline
+        background-color: var(--color-white)
+        color: var(--color-button-1)
 
     &:hover
         cursor: pointer

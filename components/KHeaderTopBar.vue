@@ -40,13 +40,13 @@ nuxtApp.hook('page:finish', () => {
 
 <style scoped lang="sass">
 .top-bar
-    position: sticky
-    top: 0
-    left: 0
-    right: 0
+    // position: sticky
+    // top: 0
+    // left: 0
+    // right: 0
     height: 33px
     background-color: var(--color-bg-1)
-    z-index: 1
+    // z-index: 1
 
     // background-color: transparent
 
