@@ -116,7 +116,7 @@ function handleShowMenu() {
                 height: 100%
                 font-family: 'Catamaran'
                 font-size: 1.1rem
-                font-weight: 600
+                font-weight: 500
                 color: var(--color-dark-1)
                 display: flex
                 align-items: center

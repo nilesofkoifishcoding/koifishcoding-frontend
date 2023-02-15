@@ -72,13 +72,6 @@ definePageMeta({
     keepalive: {
         exclude: ['.overlay']
     },
-    pageTransition: {
-        name: 'page',
-        mode: 'out-in',
-        onAfterEnter: () => {
-            console.log('after enter')
-        }
-    }
 })
 const props = withDefaults(
     defineProps<{

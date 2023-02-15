@@ -1,5 +1,5 @@
 <template>
-    <Transition name="mobile-menu" :duration="{ enter: 950, leave: 400 }">
+    <Transition name="mobile-menu" :duration="{ enter: 950, leave: 800 }">
         <div v-if="props.visible" class="mobile-menu">
             <div class="cross" @click="emit('click')">
                 <font-awesome-icon :icon="['fas', 'fa-x']" />
@@ -116,7 +116,7 @@ watch(
 .mobile-menu-enter-active
     transition: all .3s cubic-bezier(.4, 0, .2, 1)
 .mobile-menu-leave-active
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .2s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .5s
 .mobile-menu-enter-from, .mobile-menu-leave-to
     opacity: 0
     backdrop-filter: blur(0)

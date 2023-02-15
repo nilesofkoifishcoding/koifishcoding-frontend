@@ -1,21 +1,101 @@
 <template>
     <div class="typing">
-        <div class="screen">
-            <pre v-html="html" />
+        <div class="screen" @scroll="testScroll" ref="screen">
+            <pre v-html="newHtml" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import { resolve } from 'mlly';
 
-const html = ref(`<span style="color: red;">&lt;html&gt;</span>
+
+const html = ref(`&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;Koi Fish Coding&lt;/title&gt;
+    &lt;title&gt;<span class="gradient-text-2">Koi Fish Coding</span>&lt;/title&gt;
   &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+        &lt;div class="flex items-center justify-between"&gt;
+            &lt;a href="<span class="gradient-text-2">koifishcoding.com</span>"&gt;<img class="html-logo" src="/favicon.ico" />&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;nav&gt;
+            &lt;NavItem&gt;Live&lt;/NavItem&gt;
+            &lt;NavItem&gt;Laugh&lt;/NavItem&gt;
+            &lt;NavItem&gt;Love&lt;/NavItem&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;aside&gt;
+            &lt;blockquote&gt;
+                Integrity-Based Learning
+            &lt;/blockquote&gt;
+        &lt;/aside&gt;
+        &lt;section&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Study&lt;/li&gt;
+                &lt;li&gt;Prepare&lt;/li&gt;
+                &lt;li&gt;<span class='gradient-text-2'>Succeed</span>&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;CompanyLogo /&gt;
+            &lt;div class="mt-8 grid grid-cols-4 gap-4"&gt;
+                &lt;span&gt;Directory&lt;/span&gt;
+                &lt;span&gt;Contact Us&lt;/span&gt;
+                &lt;span&gt;About Us&lt;/span&gt;
+                &lt;span&gt;Careersy&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/main&gt;
+    &lt;script src="/gAnalytics.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;/body&gt;
 &lt;/html&gt;`)
 
 console.log(html.value[0])
 
+const newHtml = ref('')
+const screen = ref(null)
+
+function testScroll() {
+    if (screen.value) {
+        console.log((screen.value as HTMLElement).scrollTop)
+    }
+}
+
+async function handleTyping() {
+    console.log('woah')
+    const chars = html.value.split('')
+
+    const placeChar = (char: string) => newHtml.value += char
+
+    if (!screen.value) {
+        return
+    }
+    const el = (screen.value as HTMLElement)
+
+    for (let i = 0; i < chars.length; i++) {
+        newHtml.value = newHtml.value + chars[i]
+
+        await new Promise((resolve) => setTimeout(resolve, 2));
+
+
+
+        const additional = el.scrollHeight - el.clientHeight
+        el.scrollTop = additional
+
+        // if (screen.value) {
+        //     console.log((screen.value as HTMLElement).scrollTop)
+        // }
+
+    }
+
+    el.scrollTop = 0
+
+
+}
+
+onMounted(handleTyping)
 
 </script>
 
@@ -25,7 +105,7 @@ console.log(html.value[0])
     justify-content: center
     align-items: center
     flex: 1
-    // display: none
+    width: 45%
     .screen
         width: 60%
         height: 70%
@@ -37,6 +117,29 @@ console.log(html.value[0])
         padding: 1rem
         box-sizing: border-box
 
+        overflow-y: scroll
+        overflow-x: hidden
+
+        transition: all 500ms linear
+
+        scroll-behavior: smooth
+
+        -ms-overflow-style: none
+        scrollbar-width: none
+        &::-webkit-scrollbar
+            display: none
+
         pre
             margin-top: 0
+</style>
+
+<style lang="sass">
+.html-logo
+    position: relative
+    top: 5px
+    margin: -7px 2px 0
+    width: 21px
+
+.success
+    color: var(--color-success)
 </style>
