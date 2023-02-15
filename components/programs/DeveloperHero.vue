@@ -3,7 +3,7 @@
         <div class="overlay2">
 
         </div>
-        <div class="overlay">
+        <div class="overlay" ref="parentElRef">
             <p></p>
             <p></p>
             <p></p>
@@ -68,6 +68,11 @@
 </template>
 
 <script lang="ts" setup>
+definePageMeta({
+    keepalive: {
+        exclude: ['.overlay']
+    }
+})
 const props = withDefaults(
     defineProps<{
         transparentBg?: boolean
@@ -78,9 +83,14 @@ const props = withDefaults(
 )
 const loaded = ref(false);
 const nuxtApp = useNuxtApp()
+const parentElRef = ref<HTMLElement | null>(null)
 
-nuxtApp.hook('page:finish', () => {
-    const elements = document.getElementsByTagName('p');
+function writeLetters() {
+    if (!parentElRef.value) {
+        return
+    }
+    const elements = parentElRef.value.getElementsByTagName('p')
+    // const elements = document.getElementsByTagName('p');
     const alphabet = ['<span class="">A</span>', '<span class="bold">B</span>', '<span class="">C</span>', '<span class="">D</span>', '<span class="">E</span>', '<span class="">F</span>', '<span class="">G</span>', '<span class="">H</span>', '<span class="">I</span>', '<span class="">J</span>', '<span class="">K</span>', '<span class="">L</span>', '<span class="">M</span>', '<span class="">N</span>', '<span class="">O</span>', '<span class="">P</span>', '<span class="">Q</span>', '<span class="">R</span>', '<span class="">S</span>', '<span class="">T</span>', '<span class="">U</span>', '<span class="">V</span>', '<span class="">W</span>', '<span class="">X</span>', '<span class="">Y</span>', '<span class="">Z</span>'];
     function writeLetters() {
         for (let i = 0; i < elements.length; i++) {
@@ -94,10 +104,27 @@ nuxtApp.hook('page:finish', () => {
         writeLetters()
         counter++;
 
-        if (counter === 180) {
+        if (counter === 110) {
             clearInterval(interval)
         }
-    }, 50)
+    }, 65)
+}
+
+onMounted(() => {
+    setTimeout(() => {
+        writeLetters()
+    }, 1000)
+})
+
+
+onBeforeUnmount(() => {
+    if (!parentElRef.value) {
+        return
+    }
+    const elements = parentElRef.value.getElementsByTagName('p')
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = ''
+    }
 })
 </script>
 

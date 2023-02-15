@@ -116,7 +116,7 @@ watch(
 .mobile-menu-enter-active
     transition: all .3s cubic-bezier(.4, 0, .2, 1)
 .mobile-menu-leave-active
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .7s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .4s
 .mobile-menu-enter-from, .mobile-menu-leave-to
     opacity: 0
     backdrop-filter: blur(0)
@@ -124,7 +124,7 @@ watch(
 .mobile-menu-enter-active .cross
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
 .mobile-menu-leave-active .cross
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .7s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .35s
 .mobile-menu-enter-from .cross, .mobile-menu-leave-to .cross
     transform: rotateZ(45deg)
     opacity: 0
@@ -132,37 +132,37 @@ watch(
 .mobile-menu-enter-active .developer
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
 .mobile-menu-leave-active .developer
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .6s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
 .mobile-menu-enter-from .developer, .mobile-menu-leave-to .developer
     opacity: 0 !important
 .mobile-menu-enter-active .instructor
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .4s
 .mobile-menu-leave-active .instructor
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .5s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .25s
 .mobile-menu-enter-from .instructor, .mobile-menu-leave-to .instructor
     opacity: 0 !important
 .mobile-menu-enter-active .nashville
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .5s
 .mobile-menu-leave-active .nashville
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .4s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .2s
 .mobile-menu-enter-from .nashville, .mobile-menu-leave-to .nashville
     opacity: 0 !important
 .mobile-menu-enter-active .faq
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .6s
 .mobile-menu-leave-active .faq
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .15s
 .mobile-menu-enter-from .faq, .mobile-menu-leave-to .faq
     opacity: 0 !important
 .mobile-menu-enter-active .break
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .7s
 .mobile-menu-leave-active .break
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .2s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .1s
 .mobile-menu-enter-from .break, .mobile-menu-leave-to .break
     opacity: 0 !important
 .mobile-menu-enter-active .enroll
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .8s
 .mobile-menu-leave-active .enroll
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .1s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .05s
 .mobile-menu-enter-from .enroll, .mobile-menu-leave-to .enroll
     opacity: 0 !important
 .mobile-menu-enter-active .login
