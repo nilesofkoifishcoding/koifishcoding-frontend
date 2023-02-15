@@ -1,14 +1,14 @@
 <template>
-    <Transition name="mobile-menu" :duration="600">
+    <Transition name="mobile-menu" :duration="1000">
         <div v-if="props.visible" class="mobile-menu">
             <div class="cross" @click="emit('click')">
                 <font-awesome-icon :icon="['fas', 'fa-x']" />
             </div>
             <div class="items">
-                <div class="item">
+                <NuxtLink @click="emit('click')" to="/programs/developer" class="item developer">
                     <span>Full Stack</span>
                     <span>Developer Program</span>
-                </div>
+                </NuxtLink>
                 <div class="item">Instructor</div>
                 <div class="item">Nashville</div>
                 <div class="item">FAQ</div>
@@ -89,8 +89,8 @@ watch(
             font-weight: 300
             line-height: 2.4rem
             padding: 1rem 4rem
-            &:nth-child(1)
-                font-weight: 600
+            & > *
+                opacity: 1
             &.break
                 height: 1px
                 margin: 0 auto
@@ -119,7 +119,7 @@ watch(
 .mobile-menu-enter-active
     transition: all .3s cubic-bezier(.4, 0, .2, 1)
 .mobile-menu-leave-active
-    transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .6s
 .mobile-menu-enter-from, .mobile-menu-leave-to
     opacity: 0
     backdrop-filter: blur(0)
@@ -127,9 +127,16 @@ watch(
 .mobile-menu-enter-active .cross
     transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
 .mobile-menu-leave-active .cross
-    transition: all .3s cubic-bezier(.4, 0, .2, 1)
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .3s
 .mobile-menu-enter-from .cross, .mobile-menu-leave-to .cross
     transform: rotateZ(45deg)
     opacity: 0
+
+.mobile-menu-enter-active .developer
+    transition: all .3s cubic-bezier(.4, 0, .2, 1) .6s
+.mobile-menu-leave-active .developer
+    transition: all .3s cubic-bezier(.4, 0, .2, 1)
+.mobile-menu-enter-from .developer, .mobile-menu-leave-to .developer
+    opacity: 0 !important
 
 </style>
