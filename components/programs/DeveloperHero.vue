@@ -121,10 +121,6 @@ onMounted(() => {
     setTimeout(() => {
         writeLetters()
     }, 1000)
-})
-
-
-onBeforeUnmount(() => {
     if (!parentElRef.value) {
         return
     }
@@ -133,6 +129,17 @@ onBeforeUnmount(() => {
         elements[i].innerHTML = ''
     }
 })
+
+
+// onBeforeUnmount(() => {
+//     if (!parentElRef.value) {
+//         return
+//     }
+//     const elements = parentElRef.value.getElementsByTagName('p')
+//     for (let i = 0; i < elements.length; i++) {
+//         elements[i].innerHTML = ''
+//     }
+// })
 </script>
 
 <style lang="sass" scoped>
