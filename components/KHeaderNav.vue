@@ -28,22 +28,27 @@
                         <span class="highlight">F</span>AQ
                     </span>
                 </div>
-                <UiButton text="Enroll" />
+                <UiLinkButton text="Enroll" />
             </div>
             <div class="mobile-nav-items">
-                <UiButton text="Menu" outline />
-                <UiButton text="Enroll" />
+                <UiButton @click="handleShowMenu" text="Menu" outline />
+                <UiLinkButton text="Enroll" />
             </div>
             <div class="mini-nav-items">
-                <UiButton hamburger />
+                <UiButton @click="handleShowMenu" hamburger />
             </div>
         </div>
     </div>
+
+    <Teleport to="body">
+        <MobileMenu :visible="mobileMenuVisibility" @click="mobileMenuVisibility = false" />
+    </Teleport>
 </template>
 
 <script setup lang="ts">
 const nuxtApp = useNuxtApp()
 const loaded = ref(false)
+const mobileMenuVisibility = ref(false)
 
 nuxtApp.hook('page:finish', () => {
     loaded.value = true
@@ -56,6 +61,10 @@ const props = withDefaults(
         transparentBg: undefined,
     }
 )
+
+function handleShowMenu() {
+    mobileMenuVisibility.value = true
+}
 
 </script>
 

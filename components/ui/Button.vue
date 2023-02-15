@@ -1,18 +1,18 @@
 <template>
-    <NuxtLink to="/enroll">
-        <button :class="{ outline: props.outline, hamburger: props.hamburger }">
-            <template v-if="props.hamburger">
-                <span></span><span></span><span></span>
-            </template>
-            <template v-else>
-                <span class="text">{{ props.text }}</span>
-            </template>
-        </button>
-    </NuxtLink>
+    <button @click="emit('click')" :class="{ outline: props.outline, hamburger: props.hamburger }">
+        <template v-if="props.hamburger">
+            <span></span><span></span><span></span>
+        </template>
+        <template v-else>
+            <span class="text">{{ props.text }}</span>
+        </template>
+    </button>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+const emit = defineEmits<{
+    (e: 'click'): void
+}>()
 const props = withDefaults(
     defineProps<{
         text?: string,
@@ -31,6 +31,7 @@ a
     margin-left: 1rem
     text-decoration: none
 button
+    margin-left: 1rem
     border: none
     outline: none
     padding: 0 .9rem
