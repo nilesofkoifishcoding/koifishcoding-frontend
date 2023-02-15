@@ -34,6 +34,9 @@
                 <UiButton text="Menu" outline />
                 <UiButton text="Enroll" />
             </div>
+            <div class="mini-nav-items">
+                <UiButton hamburger />
+            </div>
         </div>
     </div>
 </template>
@@ -85,9 +88,15 @@ const props = withDefaults(
             align-items: center
             position: relative
 
+        & > .mini-nav-items
+            display: none
+            @media screen and (max-width: $breakpoint-small-medium)
+                display: flex
+
         & > .mobile-nav-items
             display: none
-            @media screen and (max-width: $breakpoint-medium-large)
+            // @media screen and (max-width: $breakpoint-medium-large), screen and (min-width: $breakpoint-small-medium)
+            @media screen and (min-width: $breakpoint-small-medium) and (max-width: $breakpoint-medium-large)
                 display: flex
 
         & > .nav-items

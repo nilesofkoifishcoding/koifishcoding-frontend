@@ -1,19 +1,27 @@
 <template>
     <NuxtLink to="/enroll">
-        <button :class="{ outline: props.outline }">
-            <span class="text">{{ props.text }}</span>
+        <button :class="{ outline: props.outline, hamburger: props.hamburger }">
+            <template v-if="props.hamburger">
+                <span></span><span></span><span></span>
+            </template>
+            <template v-else>
+                <span class="text">{{ props.text }}</span>
+            </template>
         </button>
     </NuxtLink>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 const props = withDefaults(
     defineProps<{
-        text: string,
-        outline?: boolean
+        text?: string,
+        outline?: boolean,
+        hamburger?: boolean
     }>(),
     {
-        outline: false
+        outline: false,
+        hamburger: false
     }
 )
 </script>
@@ -56,4 +64,16 @@ button
         color: var(--color-white)
 
         transition: all 0.2s cubic-bezier(.4,0,.2,1)
+
+    &.hamburger
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding: .35rem .9rem
+        border: none
+        background-color: var(--color-white)
+        span
+            width: 2rem
+            height: .2rem
+            background-color: var(--color-button-1)
 </style>
