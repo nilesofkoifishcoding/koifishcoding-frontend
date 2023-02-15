@@ -1,6 +1,8 @@
 <template>
     <div class="create-apps">
-        <div class="graphic"></div>
+        <div class="graphic">
+            <WhatdevelopersdoCreateAppsGraphic />
+        </div>
         <div class="title">Create Apps</div>
     </div>
 </template>
@@ -9,6 +11,10 @@
 .create-apps
     .graphic
         height: 12rem
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
     .title
         text-align: center
 </style>
