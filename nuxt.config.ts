@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        pageTransition: false,
+        pageTransition: {
+            name: 'page',
+            mode: 'out-in'
+        },
         cdnURL: 'https://static.koifishcoding.com',
         head: {
             title: 'Koi Fish Coding',

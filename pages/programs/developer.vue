@@ -15,6 +15,18 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+    keepalive: {
+        exclude: ['.overlay']
+    },
+    pageTransition: {
+        name: 'page',
+        mode: 'out-in',
+        onAfterEnter: () => {
+            console.log('after enter')
+        }
+    }
+})
 </script>
 
 <style lang="sass" scoped>

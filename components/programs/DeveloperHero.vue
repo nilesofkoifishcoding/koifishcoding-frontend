@@ -71,6 +71,13 @@
 definePageMeta({
     keepalive: {
         exclude: ['.overlay']
+    },
+    pageTransition: {
+        name: 'page',
+        mode: 'out-in',
+        onAfterEnter: () => {
+            console.log('after enter')
+        }
     }
 })
 const props = withDefaults(
@@ -132,7 +139,6 @@ onBeforeUnmount(() => {
 $inset: 0
 
 .hero
-    // margin-bottom: 100px
     height: 31rem
     position: relative
     background-size: cover
