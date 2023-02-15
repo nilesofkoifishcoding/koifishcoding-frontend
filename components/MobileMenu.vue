@@ -4,30 +4,18 @@
             <div class="cross" @click="emit('click')">
                 <font-awesome-icon :icon="['fas', 'fa-x']" />
             </div>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>45745</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>35</p>
-            <p>sldkfjsdlkfj</p>
-            <p>56456</p>
-            <p>sldkfjsdlkfj</p>
-            <p>323423</p>
-            <p>2343</p>
-            <p>sldkfjsdlkfj</p>
-            <p>2342</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
-            <p>sldkfjsdlkfj</p>
+            <div class="items">
+                <div class="item">
+                    <span>Full Stack</span>
+                    <span>Developer Program</span>
+                </div>
+                <div class="item">Instructor</div>
+                <div class="item">Nashville</div>
+                <div class="item">FAQ</div>
+                <div class="item break"></div>
+                <div class="item enroll">Enroll</div>
+                <div class="item login">Student Login</div>
+            </div>
         </div>
     </Transition>
 </template>
@@ -62,12 +50,16 @@ watch(
     height: 100vh
     width: 100vw
     z-index: 100
-    background-color: rgba(255, 255, 255, 0.93)
-    backdrop-filter: blur(6px)
+    background-color: rgba(255, 255, 255, 0.95)
+    backdrop-filter: blur(8px)
     color: var(--color-dark)
     opacity: 1
     font-family: 'Catamaran'
     overflow: hidden
+
+    display: flex
+    justify-content: center
+    align-items: center
 
     .cross
         // transform: translateX(0)
@@ -86,6 +78,42 @@ watch(
         @media screen and (min-width: $breakpoint-small)
             &:hover
                 background-color: var(--color-dark-e)
+
+    .items
+        .item
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: 2.5rem
+            font-size: 200%
+            font-weight: 300
+            line-height: 2.4rem
+            padding: 1rem 4rem
+            &:nth-child(1)
+                font-weight: 600
+            &.break
+                height: 1px
+                margin: 0 auto
+                width: 20rem
+                background-color: var(--color-dark-d)
+                padding: 0
+            &.enroll
+                background-color: var(--color-button-1)
+                color: var(--color-white)
+                padding: 1.2rem 6rem
+                border-radius: 4px
+            &.login
+                font-size: 1.2rem
+            
+            &:hover:not(.enroll)
+                background-color: var(--color-dark-e)
+                padding: 1rem 4rem
+
+            @media screen and (max-height: 900px)
+                margin: 1rem
+                font-size: 150%
+                &.enroll
+                    padding: .5rem 2rem
     
 
 .mobile-menu-enter-active
