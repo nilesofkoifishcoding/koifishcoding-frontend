@@ -1,6 +1,8 @@
 <template>
     <div class="build-tools">
-        <div class="graphic"></div>
+        <div class="graphic">
+            <WhatdevelopersdoBuildToolsGraphic />
+        </div>
         <div class="title">Build Tools</div>
     </div>
 </template>
