@@ -1,6 +1,6 @@
 <template>
     <div class="typing">
-        <div class="screen" @scroll="testScroll" ref="screen">
+        <div class="screen" ref="screen">
             <pre v-html="newHtml" />
         </div>
     </div>
@@ -52,22 +52,11 @@ const html = ref(`&lt;html&gt;
   &lt;/body&gt;
 &lt;/html&gt;`)
 
-console.log(html.value[0])
-
 const newHtml = ref('')
 const screen = ref(null)
 
-function testScroll() {
-    if (screen.value) {
-        console.log((screen.value as HTMLElement).scrollTop)
-    }
-}
-
 async function handleTyping() {
-    console.log('woah')
     const chars = html.value.split('')
-
-    const placeChar = (char: string) => newHtml.value += char
 
     if (!screen.value) {
         return
@@ -79,20 +68,10 @@ async function handleTyping() {
 
         await new Promise((resolve) => setTimeout(resolve, 2));
 
-
-
         const additional = el.scrollHeight - el.clientHeight
         el.scrollTop = additional
-
-        // if (screen.value) {
-        //     console.log((screen.value as HTMLElement).scrollTop)
-        // }
-
     }
-
     el.scrollTop = 0
-
-
 }
 
 onMounted(handleTyping)

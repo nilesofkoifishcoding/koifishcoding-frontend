@@ -24,7 +24,7 @@
 <style lang="sass" scoped>
 .wwd
     margin-top: 4rem
-    padding-bottom: 400px
+    padding-bottom: 14rem
 
     & > .title
         margin: 0 auto
@@ -48,9 +48,15 @@
                 font-size: 1rem
         
         .graphics
+            margin-top: 5rem
             display: flex
             font-weight: 500
             letter-spacing: 0.02rem
+            // border: 1px var(--color-dark-d) solid
             & > *
+                padding: 5px
                 flex: 1
+                border-right: 1px var(--color-dark-d) solid
+                &:last-child
+                    border-right: none
 </style>

@@ -43,6 +43,11 @@
     <div class="tools">Something</div>
     <!-- <HomeHeroSubMain /> -->
     <HomeWhatWeDo />
+    <div class="jobs">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="arrow"></div>
+    </div>
     <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
     <HomeHowItWorks v-if="false" />
     <div class="pricing">
@@ -236,4 +241,37 @@ console.log('hey')
     backdrop-filter: blur(8px)
     border-radius: 6px
     box-shadow: 0 0 3px 1px rgba(30, 30, 30, 0.3)
+
+$arrow-size: 20px
+.jobs
+    height: 30rem
+    display: flex
+    // padding-bottom: 400px
+    margin-bottom: 200px
+    position: relative
+    & > *
+        flex: 1
+        height: 100%
+    .left
+        background-color: var(--color-brand-2b)
+    .right
+        background-color: var(--color-brand-2)
+        background-color: var(--color-brand-2)
+    .arrow
+        position: absolute
+        top: calc(50% - ($arrow-size / 2))
+        left: 50%
+        width: 0
+        height: 0
+        border-top: $arrow-size transparent solid
+        border-bottom: $arrow-size transparent solid
+        border-left: $arrow-size var(--color-brand-2b) solid
+
+.arrow-right 
+    position: absolute
+    width: 0
+    height: 0
+    border-top: 60px solid transparent
+    border-bottom: 60px solid transparent
+    border-left: 60px solid green
 </style>

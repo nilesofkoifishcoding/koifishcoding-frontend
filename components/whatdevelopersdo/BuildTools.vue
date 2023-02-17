@@ -11,6 +11,7 @@
 .build-tools
     .graphic
         height: 12rem
+        position: relative
     .title
         text-align: center
 </style>
