@@ -44,8 +44,15 @@
     <!-- <HomeHeroSubMain /> -->
     <HomeWhatWeDo />
     <div class="jobs">
-        <div class="left"></div>
-        <div class="right"></div>
+        <div class="left">
+            <span>How many open jobs are there?</span>
+        </div>
+        <div class="right">
+            <div>
+                <span>1,365,000+</span>
+                <div class="counting">And Climbing</div>
+            </div>
+        </div>
         <div class="arrow"></div>
     </div>
     <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
@@ -249,14 +256,47 @@ $arrow-size: 20px
     // padding-bottom: 400px
     margin-bottom: 200px
     position: relative
+    font-family: 'Catamaran'
     & > *
         flex: 1
         height: 100%
     .left
         background-color: var(--color-brand-2b)
+        display: flex
+        justify-content: center
+        align-items: center
+        color: var(--color-white)
+        font-weight: 100
+        font-size: 2.4rem
+        text-align: center
+        // padding: 1rem
+        box-sizing: border-box
     .right
         background-color: var(--color-brand-2)
         background-color: var(--color-brand-2)
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        // font-family: sans-serif
+        font-size: 3rem
+        position: relative
+        color: var(---color-white)
+        span
+            color: var(--color-white)
+            font-weight: 900
+            font-size: 4rem
+            letter-spacing: 0.05rem
+        .counting
+            position: absolute
+            left: 0
+            right: 0
+            margin: 0 auto
+            color: var(--color-white)
+            font-weight: 700
+            font-size: 1rem
+            font-family: 'Catamaran'
+            letter-spacing: 0.05rem
     .arrow
         position: absolute
         top: calc(50% - ($arrow-size / 2))
