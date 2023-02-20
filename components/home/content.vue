@@ -55,6 +55,7 @@
         </div>
         <div class="arrow"></div>
     </div>
+    <HomePositions />
     <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
     <HomeHowItWorks v-if="false" />
     <div class="pricing">
@@ -254,7 +255,7 @@ $arrow-size: 20px
     height: 30rem
     display: flex
     // padding-bottom: 400px
-    margin-bottom: 200px
+    margin-bottom: 100px
     position: relative
     font-family: 'Catamaran'
     & > *
