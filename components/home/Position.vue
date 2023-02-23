@@ -1,6 +1,5 @@
 <template>
     <div class="position">
-        <div class="right-arrow"></div>
         <!-- <div class="title">Back End Development</div> -->
         <div class="info">
             <div class="header">NAME</div>
@@ -39,18 +38,18 @@
 
 <style lang="sass" scoped>
 .position
-    padding-top: 2rem
-    height: 21rem
+    // flex: 1
+    // min-height: 300px
+    width: 50%
     position: relative
-    margin: 20px 0
-    background-color: var(--color-white)
-    margin-right: 20px
-    padding-left: 1rem
-    .title
-        font-size: 1.4rem
+    padding-top: 1rem
+    padding-bottom: 1rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     .info
         display: flex
-        margin-top: 1.5rem
+        // margin-top: 1.5rem
         line-height: 1.2rem
         .header
             width: 6rem

@@ -10,9 +10,7 @@
             </div>
             <p>Software engineers are frequently called Developers these days. The job is stil the same: make websites,
                 create mobile apps, build tools, and make the world a more efficient and better place.</p>
-            <div class="positions-table">
-                <HomePosition />
-            </div>
+            <HomePositionsTable />
             <div class="table" style="display: none;">
                 <div class="ball"></div>
                 <div class="jobs">
