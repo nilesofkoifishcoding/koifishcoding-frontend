@@ -10,18 +10,17 @@
             </div>
             <p>Software engineers are frequently called Developers these days. The job is stil the same: make websites,
                 create mobile apps, build tools, and make the world a more efficient and better place.</p>
-            <div class="table">
+            <div class="positions-table">
+                <HomePosition />
+            </div>
+            <div class="table" style="display: none;">
                 <div class="ball"></div>
                 <div class="jobs">
                     <div class="position">
                         <div class="title">Front End Development</div>
                         <div class="description"></div>
                     </div>
-                    <div class="position highlighted">
-                        <div class="right-arrow"></div>
-                        <div class="title">Back End Development</div>
-                        <div class="description"></div>
-                    </div>
+
                     <div class="position">
                         <div class="title">Full Stack Development</div>
                         <div class="description"></div>
@@ -76,7 +75,7 @@
                 position: relative
                 background-color: var(--color-white)
                 &::before
-                    box-shadow: -2px 0 8px 3px var(--color-dark-d2)
+                    // box-shadow: -2px 0 8px 3px var(--color-dark-d2)
                     content: ''
                     position: absolute
                     top: -10px
@@ -84,14 +83,14 @@
                     // border-radius: 10px
                     width: 100%
                     height: 100%
-                    background-color: var(--color-brand-1)
+                    // background-color: var(--color-brand-1)
                     z-index: -1
-                    animation: 2s pulse-bg infinite alternate
+                    // animation: 2s pulse-bg infinite alternate
                 .border
                     width: 10px
-                    height: 15rem
+                    height: 21rem
                     position: absolute
-                    top: 17.5rem
+                    top: 23.5rem
                     left: -10px
                     background-color: white
                     // border: 1px red solid
@@ -99,22 +98,50 @@
             & > .jobs
                 width: 60%
                 .position
-                    height: 15rem
+                    padding-top: 2rem
+                    height: 21rem
                     position: relative
                     // box-shadow: 0px 0 4px 3px var(--color-dark-e)
                     margin: 20px 0
                     background-color: var(--color-white)
                     margin-right: 20px
+                    padding-left: 1rem
+                    opacity: 0.5
                     .title
                         font-size: 1.4rem
-                        opacity: 0.5
+                    .info
+                        display: flex
+                        margin-top: 1.5rem
+                        line-height: 1.2rem
+                        .header
+                            width: 6rem
+                            font-weight: 700
+                            font-size: 0.7rem
+                            padding-right: 0.4rem
+                            opacity: 0.4
+                            text-align: right
+                        .description
+                            border-left: 1px var(--color-dark-d) solid
+                            padding-left: 0.4rem
+                            flex: 1
+                            font-weight: 400
+                            .lesser
+                                opacity: 0.5
+                            // padding-bottom: 1rem
+                            // border-bottom: 1px var(--color-dark-d) solid
+                            &.heading
+                                font-size: 1.5rem
+                                font-weight: 800
+                                color: var(--color-dark)
+                            // line-height: 1.2rem
                     &.highlighted
+                        opacity: 1
                         // border-left: 6px var(--color-brand-1) solid
                         box-shadow: -2px 0 8px 3px var(--color-dark-d)
                         margin-right: 0
                         // border-radius: 10px
                         &::before
-                            box-shadow: -2px 0 8px 3px var(--color-dark-d2)
+                            // box-shadow: -2px 0 8px 3px var(--color-dark-d2)
                             content: ''
                             position: absolute
                             top: -10px
@@ -122,9 +149,9 @@
                             // border-radius: 10px
                             width: 100%
                             height: 100%
-                            background-color: var(--color-brand-1)
+                            // background-color: var(--color-brand-1)
                             z-index: -1
-                            animation: 2s pulse-bg infinite alternate
+                            // animation: 2s pulse-bg infinite alternate
                             
                         &::after
                             content: ''
@@ -148,8 +175,10 @@
                         .title
                             opacity: 1
                             padding-top: 1rem
-                            padding-left: 1rem
+                            // padding-left: 1rem
                             font-size: 1.4rem
+                            // background-color: var(--color-brand-3-)
+                            // display: inline
                             // margin-top: 1rem
                     
 @keyframes pulse-bg
