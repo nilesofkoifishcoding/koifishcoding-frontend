@@ -42,6 +42,7 @@
     </div>
     <div class="tools">Something</div>
     <!-- <HomeHeroSubMain /> -->
+    <HomeYouCanToo />
     <HomeWhatWeDo />
     <div class="jobs">
         <div class="left">
@@ -55,7 +56,9 @@
         </div>
         <div class="arrow"></div>
     </div>
-    <HomePositions />
+    <HomeSectors />
+    <!-- <div style="height: 1000px"></div> -->
+    <!-- <HomePositions /> -->
     <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
     <HomeHowItWorks v-if="false" />
     <div class="pricing">

@@ -11,6 +11,7 @@
 </template>
 
 <style lang="sass" scoped>
+$selectedColor: var(--color-brand-1)
 .pt
     display: flex
     border-radius: 10px
@@ -26,9 +27,9 @@
                 border-bottom: none
             &.selected
                 // background-color: var(--color-brand-4)
-                border-left: 5px var(--color-brand-4) solid
+                border-left: 5px $selectedColor solid
                 // border-right: 4px var(--color-brand-4) solid
-                color: var(--color-brand-4)
+                color: $selectedColor
                 border-right: none
             
 </style>
