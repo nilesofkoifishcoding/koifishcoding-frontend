@@ -24,27 +24,21 @@ $padding-bottom: 1rem
 .dev-nav
     display: flex
     justify-content: center
-    // background-color: var(--color-brand-2)
-    // background-color: rgba(255, 255, 255, 0.5)
     backdrop-filter: blur(5px)
     height: 8rem
-    width: 90%
+    width: 100%
     margin: 0 auto
-    border-radius: 20px
-    position: relative
-    top: -70px
-    box-shadow: 0 0 8px 2px rgba(30, 30, 30, 0.2)
-    // border: 1px blue solid
-    // border-bottom: 2px var(--color-dark-e) solid
+    position: sticky
+    top: 90px
+    box-shadow: 0 5px 8px 2px rgba(30, 30, 30, 0.1)
+    background-color: var(--color-bg-1)
     .container
         display: flex
         position: relative
         color: var(--color-dark-1)
         width: 100%
-        // border-bottom: 2px var(--color-dark-d) solid
         background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png')
         background-repeat: repeat
-        // background-size: 100
         background-position: 30% 30%
         .title
             margin-right: auto

@@ -113,7 +113,7 @@ function writeLetters() {
 onMounted(() => {
     setTimeout(() => {
         writeLetters()
-    }, 1000)
+    }, 500)
     if (!parentElRef.value) {
         return
     }
