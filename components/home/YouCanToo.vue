@@ -3,7 +3,7 @@
         <div :class="['reason', loaded ? 'loaded' : '']">
             <span>Coders enjoy remote work, high salaries, and job security.</span>
             <span>Now it's your turn.</span>
-
+            <div style="color: var(--color-button-1); font-size:24px;">Read How in our Latest Blog Post</div>
         </div>
     </div>
 </template>

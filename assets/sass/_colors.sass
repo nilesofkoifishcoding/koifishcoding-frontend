@@ -1,66 +1,70 @@
 html, body
-    padding: 0
-    margin: 0
+  padding: 0
+  margin: 0
+
 body
-    background-color: rgb(252, 252, 252)
-    &.modal-open
-        overflow: hidden
+  background-color: rgb(252, 252, 252)
+
+  &.modal-open
+    overflow: hidden
+
 .hotred
-    color: rgb(250, 20, 20)
+  color: rgb(250, 20, 20)
+
 .gradient-text
-    background-image: linear-gradient(120deg, #40ffca, #9a76a4, #da0e7f)
-    background-clip: text
-    color: transparent
+  background-image: linear-gradient(120deg, #40ffca, #9a76a4, #da0e7f)
+  background-clip: text
+  color: transparent
 
 .bold
-    color: var(--color-brand-1)
-    font-weight: 600
-    
+  color: var(--color-brand-1)
+  font-weight: 600
+
+
 :root
-    // **************** Colors ****************
-    --color-white: #fff
-    --color-white-a: #ffffff7e
-    --color-white-b: #ffffffc7
-    --color-white-c: #ffffffe4
-    --color-white-e: #ffffff69
+  --color-white: #fff
+  --color-white-a: #ffffff7e
+  --color-white-b: #ffffffc7
+  --color-white-c: #ffffffe4
+  --color-white-e: #ffffff69
 
-    --color-dark: #333131
-    --color-dark-a: #5f5d5d
-    --color-dark-b: #5f5d5db5
-    --color-dark-c: #33313149
-    --color-dark-d: #33313123
-    --color-dark-d2: #33313114
-    --color-dark-d2-na: #ececec
-    --color-dark-e: #e4e4e407
+  --color-dark: #333131
+  --color-dark-a: #5f5d5d
+  --color-dark-b: #5f5d5db5
+  --color-dark-c: #33313149
+  --color-dark-d: #33313123
+  --color-dark-d2: #33313114
+  --color-dark-d2-na: #ececec
+  --color-dark-e: #e4e4e407
 
-    --color-success: #42fc48
+  --color-success: #42fc48
 
-    // Brand
-    --color-brand-1: #e52949
-    --color-brand-1a: #e5294825
-    --color-brand-1b: #e5294849
-    --color-brand-1c: #e529481a
-    --color-brand-1d: rgb(255, 248, 250)
-    --color-brand-2: #993333
-    --color-brand-2a: #99333350
-    --color-brand-2b: #520d0d
-    --color-brand-3: #030b5d
-    --color-brand-4: #f8a807
-    --color-brand-4a: #f8a8072c
-    --color-brand-4b: #ffd47d
+  // Brand
+  --color-brand-1: #e52949
+  --color-brand-1a: #e5294825
+  --color-brand-1b: #e5294849
+  --color-brand-1c: #e529481a
+  --color-brand-1d: rgb(255, 248, 250)
+  --color-brand-2: #993333
+  --color-brand-2a: #99333350
+  --color-brand-2b: #520d0d
+  --color-brand-3: #030b5d
+  --color-brand-4: #f8a807
+  --color-brand-4a: #f8a8072c
+  --color-brand-4b: #ffd47d
 
-    // Buttons
-    --color-button-1: #377df7
-    --color-button-1-darker: #2867d2
+  // Buttons
+  --color-button-1: #377df7
+  --color-button-1-darker: #2867d2
 
-    // Borders
-    --color-border-1: #e7ebf0
+  // Borders
+  --color-border-1: #e7ebf0
 
-    // Backgrounds
-    --color-bg-1: #f8f9fb
-    --color-bg-2: #fef5ee
-    --color-bg-3: #f4f4f6
-    --color-bg-4: #f7f7f7
+  // Backgrounds
+  --color-bg-1: #f8f9fb
+  --color-bg-2: #fef5ee
+  --color-bg-3: #f4f4f6
+  --color-bg-4: #f7f7f7
 
 $breakpoint-large: 1225px
 $breakpoint-large-2: 1110px
@@ -70,36 +74,38 @@ $breakpoint-small-medium: 540px
 $breakpoint-small: 420px
 
 @keyframes border-blink
-    0%
-        border: 1px var(--color-brand-1a) solid
-    50%
-        border: 1px var(--color-brand-1b) solid
+  0%
+    border: 1px var(--color-brand-1a) solid
+  50%
+    border: 1px var(--color-brand-1b) solid
 
 .gradient-text
-    font-weight: bold
-    background-image: linear-gradient(120deg, var(--color-brand-1), var(--color-brand-4))
+  font-weight: bold
+  background-image: linear-gradient(120deg, var(--color-brand-1), var(--color-brand-4))
 
 .gradient-text-2
-    font-weight: 800
-    background-image: linear-gradient(45deg, var(--color-brand-1), var(--color-button-1))
-    background-clip: text
-    color: transparent
+  font-weight: 800
+  background-image: linear-gradient(45deg, var(--color-brand-1), var(--color-button-1))
+  background-clip: text
+  color: transparent
 
 
-.v-enter-active, .v-leave-active 
-    transition: opacity 0.2s ease
+.v-enter-active, .v-leave-active
+  transition: opacity 0.2s ease
+
 .v-enter-from, .v-enter-to
-    opacity: 0
+  opacity: 0
 
 a
-    text-decoration: none
-    color: inherit
-    &:visited
-        color: inherti
+  text-decoration: none
+  color: inherit
+
+  &:visited
+    color: inherti
 
 .page-enter-active, .page-leave-active
-    transition: all 0.4s
+  transition: all 0.4s
 
 .page-enter-from, .page-leave-to
-    opacity: 0
-    filter: blur(1rem)
+  opacity: 0
+  filter: blur(1rem)

@@ -1,14 +1,12 @@
 <template>
-    <div class="typing">
-        <div class="screen" ref="screen">
-            <pre v-html="newHtml" />
-        </div>
+  <div class="typing">
+    <div class="screen" ref="screen">
+      <pre v-html="newHtml"/>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { resolve } from 'mlly';
-
 
 const html = ref(`&lt;html&gt;
   &lt;head&gt;
@@ -56,22 +54,23 @@ const newHtml = ref('')
 const screen = ref(null)
 
 async function handleTyping() {
-    const chars = html.value.split('')
+  const chars = html.value.split('')
 
-    if (!screen.value) {
-        return
-    }
-    const el = (screen.value as HTMLElement)
+  if (!screen.value) {
+    return
+  }
+  const el = (screen.value as HTMLElement)
 
-    for (let i = 0; i < chars.length; i++) {
-        newHtml.value = newHtml.value + chars[i]
+  for (let i = 0; i < chars.length; i++) {
+    newHtml.value = newHtml.value + chars[i]
 
-        await new Promise((resolve) => setTimeout(resolve, 2));
+    await new Promise((resolve) => setTimeout(resolve, 5));
 
-        const additional = el.scrollHeight - el.clientHeight
-        el.scrollTop = additional
-    }
-    el.scrollTop = 0
+    // const additional = el.scrollHeight - el.clientHeight
+    el.scrollTop = el.scrollHeight
+  }
+  el.style.scrollBehavior = 'smooth'
+  el.scrollTop = 0
 }
 
 onMounted(handleTyping)
@@ -80,45 +79,52 @@ onMounted(handleTyping)
 
 <style lang="sass" scoped>
 .typing
-    display: flex
-    justify-content: center
-    align-items: center
-    flex: 1
-    width: 45%
-    .screen
-        width: 60%
-        height: 70%
-        margin: 0 auto
-        box-shadow: 0 0 6px 1px var(--color-dark-d)
-        border-radius: 6px
-        background-color: rgba(255, 255, 255, 0.2)
-        backdrop-filter: blur(3px)
-        padding: 1rem
-        box-sizing: border-box
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1
+  width: 65%
 
-        overflow-y: scroll
-        overflow-x: hidden
+  .screen
+    width: 60%
+    height: 70%
+    margin: 0 auto
+    box-shadow: 0 0 6px 1px var(--color-dark-d)
+    border-radius: 6px
+    background-color: rgba(255, 255, 255, 0.2)
+    backdrop-filter: blur(3px)
+    padding: 1rem
+    box-sizing: border-box
 
-        transition: all 500ms linear
+    overflow-y: scroll
+    overflow-x: hidden
 
-        scroll-behavior: smooth
+    transition: all 5ms linear
 
-        -ms-overflow-style: none
-        scrollbar-width: none
-        &::-webkit-scrollbar
-            display: none
+    //scroll-behavior: smooth
 
-        pre
-            margin-top: 0
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+      display: none
+
+    pre
+      margin-top: 0
+
+    @media screen and (max-width: $breakpoint-medium)
+      width: 100%
+      max-height: 180px
+      height: 180px
 </style>
 
 <style lang="sass">
 .html-logo
-    position: relative
-    top: 5px
-    margin: -7px 2px 0
-    width: 21px
+  position: relative
+  top: 5px
+  margin: -7px 2px 0
+  width: 21px
 
 .success
-    color: var(--color-success)
+  color: var(--color-success)
 </style>
