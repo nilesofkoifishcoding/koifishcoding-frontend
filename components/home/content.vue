@@ -31,6 +31,7 @@
   <HomeYouCanToo/>
   <HomeTeam/>
   <HomeOfferings/>
+  <HomeBookNow />
   <HomeDesign />
   <div style="height: 300px"></div>
   <HomeWhatWeDo/>
