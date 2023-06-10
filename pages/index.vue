@@ -1,6 +1,5 @@
 <template>
     <div class="index">
-        <!-- <KHeader /> -->
         <HomeContent />
     </div>
 </template>

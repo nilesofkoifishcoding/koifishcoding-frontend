@@ -2,24 +2,27 @@
   <div class="root">
     <div class="header-content">
       <div class="content">
-        <!-- <div class="aux-heading">Next Class Starts: Feburary 6<sup>th</sup>, 2023</div> -->
-        <div class="aux-heading">From 0 to Job Offer. Start Programming Now.</div>
         <div class="heading">
           <span>Koi Fish Coding</span>
-          <span>in <span class="nashville">Nashville</span></span>
         </div>
+        <div class="aux-heading" style="margin-bottom: 4rem;">We're <span class="maniacally">Maniacally</span> focused on quality, communication & value.</div>
+        <div class="pre-heading">We build apps & websites that your organization, clients & customers will love.</div>
         <div class="description">
-          Koi Fish Coding was founded by <span class="name">Niles Brandon</span> to empower, inspire, and
-          create future programmers for
-          the challenges of tomorrow.
+          Koi Fish Coding was founded by <span class="name">Niles Brandon</span> to empower organizations in their goals. <br> <br><span class="future">This is software development of the future.</span>
         </div>
-        <div class="invest">
-          <span>Enroll in Developer 101</span>
-          <span class="button-container">
-            <font-awesome-icon :icon="['fas', 'fa-circle-right']"/>
-          </span>
+        <NuxtLink to="https://calendly.com/meet-with-koi-fish-coding/30min">
+          <div class="invest">
+            <span>Book a Zoom Call Now</span>
+            <span class="button-container">
+              <font-awesome-icon :icon="['fas', 'fa-circle-right']"/>
+            </span>
+          </div>
+        </NuxtLink>
+        <div class="accepting" style="display: none;">
+          <div class="icon"></div>
+          <div class="text">Now Accepting New Clients</div>
         </div>
-        <div class="explore">Explore the Full Stack Developer Program</div>
+        <div class="explore" style="display: none;">Explore the Full Stack Developer Program</div>
       </div>
     </div>
     <HomeHeroTyping/>
@@ -40,9 +43,14 @@
 
     </div>
   </div>
-  <div class="tools">Something</div>
+<!--  <div class="tools">Something</div>-->
   <!-- <HomeHeroSubMain /> -->
+  <HomeOrganizations />
   <HomeYouCanToo/>
+  <HomeTeam/>
+  <HomeOfferings/>
+  <HomeDesign />
+  <div style="height: 300px"></div>
   <HomeWhatWeDo/>
   <div class="jobs">
     <div class="left">
@@ -70,7 +78,6 @@
 </template>
 
 <script setup lang="ts">
-console.log('hey')
 </script>
 
 <style scoped lang="sass">
@@ -97,10 +104,24 @@ console.log('hey')
     align-items: center
     width: 50%
 
+    .future
+      font-family: 'Kalam'
+      font-weight: 300
+
     .content
       padding-left: 150px
+
+      .maniacally
+        font-size: 40px
+        font-family: 'Bungee Shade'
       @media screen and (max-width: $breakpoint-large)
         padding-left: 60px
+
+      .pre-heading
+        font-family: Geologica
+        font-size: 0.8rem
+        display: none
+
 
       .aux-heading
         font-family: 'Montserrat'
@@ -135,12 +156,13 @@ console.log('hey')
         font-size: 1.1rem
         font-weight: 400
         line-height: 1.5rem
+        //display: none
 
         .name
           font-weight: 600
 
       .invest
-        margin-top: 1.5rem
+        margin-top: .3rem
         font-family: 'Catamaran'
         width: 18rem
         height: 3rem
@@ -208,7 +230,7 @@ console.log('hey')
 
         .heading
           align-items: center
-          font-size: 3.2rem
+          font-size: 3.8rem
           margin: 1.6rem 0
 
           & > span
@@ -218,10 +240,11 @@ console.log('hey')
           // margin-bottom: 3rem
           padding-right: unset
           width: 80%
-          margin: 0 auto 2rem
+          margin: 0 auto .2rem
+          //display: none
 
         .invest
-          margin: 1rem auto 2rem
+          margin: .2rem auto 2rem
 
   .bg-images
     width: 30%

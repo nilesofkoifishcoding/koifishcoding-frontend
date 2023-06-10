@@ -13,7 +13,9 @@
                 <div class="item nashville">Nashville</div>
                 <div class="item faq">FAQ</div>
                 <div class="item break"></div>
-                <div class="item enroll">Enroll</div>
+                <NuxtLink to="https://calendly.com/meet-with-koi-fish-coding/30min">
+                    <div class="item enroll">Book a Zoom</div>
+                </NuxtLink>
                 <div class="item login">Student Login</div>
             </div>
         </div>

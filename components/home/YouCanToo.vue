@@ -1,9 +1,20 @@
 <template>
-    <div class="youtoo">
-        <div :class="['reason', loaded ? 'loaded' : '']">
-            <span>Coders enjoy remote work, high salaries, and job security.</span>
-            <span>Now it's your turn.</span>
-            <div style="color: var(--color-button-1); font-size:24px;">Read How in our Latest Blog Post</div>
+    <div class="niles">
+        <div class="above">
+            <div class="frame">
+              <div class="quote">
+                "Koi Fish Coding is a result of <b>10+ years</b> working at world-class software development agencies.<br><br>What we bring is a peace of mind, ease, and effortlessness to the process for you"
+              </div>
+              <div class="from">
+                <div class="line"></div>
+                <div>Niles M. Brandon</div>
+              </div>
+<!--                <div class="name">Niles Brandon</div>-->
+<!--/*                <p style="font-size: 1rem; font-weight: 600;">Koi Fish Coding is a result of 10+ years working at world-class software development agencies. What we bring is a peace of mind, ease, and effortlessness to the process for you.</p>*/-->
+<!--                <br>-->
+<!--                <b><span style="font-family: 'Bungee Shade'; color: gold;">Core Value 1: </span>Communication</b>-->
+<!--                <p>We know that you want to see value from your investment with us, and it's our job to ensure you consistently see it.</p>-->
+            </div>
         </div>
     </div>
 </template>
@@ -12,47 +23,97 @@
 import { ref } from 'vue';
 const loaded = ref(false)
 onMounted(() => {
-    console.log('hey....')
     loaded.value = true
 })
 onBeforeUnmount(() => loaded.value = false)
 </script>
 
 <style scoped lang="sass">
-.youtoo
-    min-height: 30rem
-    background-image: url('~/assets/jpgs/man.jpg')
-    // niles maybe? https://www.istockphoto.com/photo/colored-dust-gm476027383-26222654?utm_source=unsplash&utm_medium=affiliate&utm_campaign=adp_photos_sponsored&utm_content=https%3A%2F%2Funsplash.com%2Fphotos%2Fh9Rx3zOYZws&utm_term=portrait%3A%3A%3A
-    background-size: cover
-    background-position: center bottom
+.niles
     position: relative
+    height: 30rem
+    background-color: black
+    background-image: url('~/assets/jpgs/niles.jpg')
+    background-position: 0% 150%
+    background-size: contain
+    background-repeat: no-repeat
 
-    .reason
+    //@media screen and (max-width: 670px)
+    //  height: 15rem
+
+    .above
+        //background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5858937324929971) 17%, rgba(0,0,0,1) 42%, rgba(0,0,0,1) 100%)
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,1) 100%)
         position: absolute
-        width: 100%
-        height: 100%
-        backdrop-filter: blur(2px)
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
         display: flex
-        flex-direction: column
-        justify-content: center
+        justify-content: flex-end
+        padding-right: 3rem
         align-items: center
-        font-size: 2rem
-        font-weight: 900
-        color: var(--color-white)
-        font-family: 'Catamaran'
-        text-align: center
-        text-shadow: 0 0 80px var(--color-white)
-        color: rgba(255, 255, 255, 0)
-        letter-spacing: 0.05rem
-        span:first-child
+
+        .frame
+          width: 45%
+          height: 50%
+          color: white
+          border-left: 2px var(--color-brand-4) solid
+          padding: 1rem
+
+          @media screen and (max-width: 955px)
+            width: 50%
+          @media screen and (max-width: 870px)
+            width: 55%
+          @media screen and (max-width: 790px)
+            width: 65%
+          @media screen and (max-width: 670px)
+            width: 85%
+            height: 30%
+
+          .from
+            position: relative
+            display: flex
+            align-items: center
+            margin-top: 2rem
+            font-size: 1.5rem
+            padding-left: 1rem
+            font-family: Kalam
             font-weight: 300
-        span:last-child
-            margin-top: 1rem
-        &.loaded
-            backdrop-filter: blur(10px)
-            transition: all .8s cubic-bezier(.4,0,.2,1)
-            color: var(--color-white)
-            text-shadow: none
-            span:last-child
-                text-shadow: 0 0 10px var(--color-dark)
+
+            .line
+              height: 2px
+              width: 15px
+              background-color: var(--color-brand-4)
+              background-color: var(--color-white)
+              margin-right: 5px
+
+          .quote
+            padding-left: 1rem
+            font-size: 1.5rem
+            line-height: 2rem
+            font-style: italic
+            font-family: Catamaran
+            font-weight: 100
+            color: var(--color-brand-4)
+
+
+
+    @media screen and (max-width: 980px)
+        background-position: -40% 150%
+
+    @media screen and (max-width: 800px)
+        background-position: -90% 150%
+
+    @media screen and (max-width: 670px)
+        height: 31rem
+        background-position: 0% 0%
+
+        .above
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,1) 100%)
+
+    @media screen and (max-width: 500px)
+
+
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="/enroll">
+    <NuxtLink :to="props.link">
         <UiButton :text="props.text" :outline="props.outline" />
     </NuxtLink>
 </template>
@@ -8,10 +8,12 @@
 const props = withDefaults(
     defineProps<{
         text: string,
-        outline?: boolean
+        outline?: boolean,
+        link?: string
     }>(),
     {
-        outline: false
+        outline: false,
+        link: '/enroll'
     }
 )
 </script>

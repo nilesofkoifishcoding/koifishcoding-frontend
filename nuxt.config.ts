@@ -28,12 +28,12 @@ export default defineNuxtConfig({
             download: true,
             base64: true,
             families: {
-                // 'Lexend+Mega': [600],
-                // 'Lilita+One': true,
-                // 'Heebo': true,
                 'Lexend Mega': [200, 300, 400, 500, 600, 700],
                 'Catamaran': [100, 200, 300, 400, 500, 600, 700, 800, 900],
-                Montserrat: [400, 500, 600, 700]
+                Montserrat: [400, 500, 600, 700],
+                'Bungee Shade': [400],
+                'Geologica': [300, 400, 500, 600, 700, 800],
+                'Kalam': [300, 400, 700]
             }
         }]
     ],

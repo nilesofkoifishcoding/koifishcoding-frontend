@@ -28,11 +28,11 @@
                         <span class="highlight">F</span>AQ
                     </span>
                 </div>
-                <UiLinkButton text="Enroll" />
+                <UiLinkButton text="Book a Zoom Call Now" link="https://calendly.com/meet-with-koi-fish-coding/30min" />
             </div>
             <div class="mobile-nav-items">
-                <UiButton @click="handleShowMenu" text="Menu" outline />
-                <UiLinkButton text="Enroll" />
+<!--                <UiButton @click="handleShowMenu" text="Menu" outline />-->
+                <UiLinkButton text="Book a Zoom Call Now" link="https://calendly.com/meet-with-koi-fish-coding/30min" />
             </div>
             <div class="mini-nav-items">
                 <UiButton @click="handleShowMenu" hamburger />
