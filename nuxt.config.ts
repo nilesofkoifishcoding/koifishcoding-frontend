@@ -35,8 +35,12 @@ export default defineNuxtConfig({
                 'Geologica': [300, 400, 500, 600, 700, 800],
                 'Kalam': [300, 400, 700]
             }
-        }]
+        }],
+        ['nuxt-gtag']
     ],
+    gtag: {
+      id: 'G-Q714EMK9NR'
+    },
     nitro: {
         preset: 'aws-lambda',
         serveStatic: true,
