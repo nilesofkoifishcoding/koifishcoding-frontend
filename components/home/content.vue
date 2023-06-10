@@ -26,25 +26,7 @@
       </div>
     </div>
     <HomeHeroTyping/>
-    <div class="bg-images" v-if="false">
-      <!-- <div class="excellence-panel"><img src="~/assets/jpgs/excellence-sushi.png" alt="" /></div> -->
-      <div class="panel"><img src="~/assets/jpgs/html-sushi-3.png" alt=""/></div>
-      <div class="panel"></div>
-      <div class="panel"></div>
-      <div class="panel"><img src="~/assets/jpgs/css-sushi-2.png" alt=""/></div>
-      <div class="panel"><img src="~/assets/jpgs/js-sushi-6.png" alt=""/></div>
-      <div class="panel"></div>
-      <div class="panel"></div>
-      <!-- <div class="panel"><img src="~/assets/jpgs/js-sushi-6.png" alt="" /></div> -->
-      <div class="panel mini"><img src="~/assets/jpgs/button-sushi-7.png"></div>
-      <div class="panel"></div>
-      <div class="panel"></div>
-      <div class="panel"></div>
-
-    </div>
   </div>
-<!--  <div class="tools">Something</div>-->
-  <!-- <HomeHeroSubMain /> -->
   <HomeOrganizations />
   <HomeYouCanToo/>
   <HomeTeam/>
@@ -64,10 +46,6 @@
     </div>
     <div class="arrow"></div>
   </div>
-  <HomeSectors/>
-  <!-- <div style="height: 1000px"></div> -->
-  <!-- <HomePositions /> -->
-  <!-- <div class="starting-salary">What do you want your starting salary to be?</div> -->
   <HomeHowItWorks v-if="false"/>
   <div class="pricing">
 
@@ -88,16 +66,10 @@
   display: flex
   z-index: 0
 
-  // background-image: url('https://images.unsplash.com/photo-1674443544891-9c00f240b69c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
-  // background-repeat: no-repeat
-  // background-position: center
-  // background-size: cover
-
   background-image: url('~/assets/jpgs/cubes.png')
 
   @media screen and (max-width: $breakpoint-medium)
     background-position: left
-
 
   .header-content
     display: flex
@@ -121,7 +93,6 @@
         font-family: Geologica
         font-size: 0.8rem
         display: none
-
 
       .aux-heading
         font-family: 'Montserrat'
@@ -237,11 +208,9 @@
             line-height: 3.1rem
 
         .description
-          // margin-bottom: 3rem
           padding-right: unset
           width: 80%
           margin: 0 auto .2rem
-          //display: none
 
         .invest
           margin: .2rem auto 2rem
@@ -252,7 +221,6 @@
     grid-template-columns: repeat(2, 60%)
     grid-template-rows: repeat(6, 150px)
     position: relative
-    // opacity: 0
 
     .excellence-panel
       position: absolute
@@ -284,7 +252,6 @@ $arrow-size: 20px
 .jobs
   height: 30rem
   display: flex
-  // padding-bottom: 400px
   margin-bottom: 100px
   position: relative
   font-family: 'Catamaran'
@@ -302,7 +269,6 @@ $arrow-size: 20px
     font-weight: 100
     font-size: 2.4rem
     text-align: center
-    // padding: 1rem
     box-sizing: border-box
 
   .right
@@ -312,7 +278,6 @@ $arrow-size: 20px
     justify-content: center
     align-items: center
     text-align: center
-    // font-family: sans-serif
     font-size: 3rem
     position: relative
     color: var(---color-white)
