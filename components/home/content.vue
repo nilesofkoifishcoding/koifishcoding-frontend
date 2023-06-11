@@ -32,10 +32,11 @@
   <HomeTeam/>
   <HomeOfferings/>
   <HomeBookNow />
-  <HomeDesign />
-  <div style="height: 300px"></div>
-  <HomeWhatWeDo/>
-  <div class="jobs">
+  <HomeOutro />
+<!--  <HomeDesign />-->
+<!--  <div style="height: 300px"></div>-->
+<!--  <HomeWhatWeDo/>-->
+  <div class="jobs" style="display: none;">
     <div class="left">
       <span>How many open jobs are there?</span>
     </div>
@@ -48,7 +49,7 @@
     <div class="arrow"></div>
   </div>
   <HomeHowItWorks v-if="false"/>
-  <div class="pricing">
+  <div class="pricing" style="display: none">
 
     <!-- <stripe-pricing-table pricing-table-id="prctbl_1MSSlbEtf4E1q3XKhjkvtvq7"
         publishable-key="pk_test_51MQvsfEtf4E1q3XKjzBgnwzHjWHHBSdjUbSC3rtT0AArLzVZz6T2tdemfJVDBOCHHAJfVKCX9LiBVskUtUA1gmOa00G7Nkuknh">

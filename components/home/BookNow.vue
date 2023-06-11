@@ -33,7 +33,7 @@
 </template>
 
 <style scoped lang="sass">
-$border-color: var(--color-border-1)
+$border-color: var(--color-button-1-lighter)
 $border-radius: 50px
 $border-width: 1px
 

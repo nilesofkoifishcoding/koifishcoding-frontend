@@ -36,7 +36,7 @@ export default defineNuxtConfig({
                 'Kalam': [300, 400, 700]
             }
         }],
-        ['nuxt-gtag']
+        // ['nuxt-gtag']
     ],
     gtag: {
       id: 'G-Q714EMK9NR'

@@ -14,6 +14,5 @@
     max-width: 100rem
     box-shadow: 0 30px 50px rgb(0 0 0 / 10%)
     margin: 0 auto
-    padding-bottom: 3rem
     position: relative
 </style>

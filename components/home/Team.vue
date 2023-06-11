@@ -25,8 +25,9 @@
 $arrow-size: 20px
 
 .team
-  margin: 0rem 0 3rem
+  margin: 0rem 0 0rem
   background-color: var(--color-brand-1)
+  background-color: var(--color-white-a)
   padding-bottom: 4rem
   position: relative
 
@@ -52,7 +53,8 @@ $arrow-size: 20px
 
     font-family: 'Bungee Shade'
     color: var(--color-white)
-    font-size: 6rem
+    color: var(--color-brand-3)
+    font-size: 5rem
     margin-bottom: 4rem
 
 
@@ -60,16 +62,24 @@ $arrow-size: 20px
   .members
     margin: 0 auto
     margin-top: 2rem
-    width: 30rem
+    max-width: 24rem
     display: flex
     justify-content: space-between
     color: var(--color-white)
+    color: var(--color-brand-3)
+
+    @media screen and (max-width: 600px)
+      flex-direction: column
 
     .member
       display: flex
       flex-direction: column
       align-items: center
       font-family: 'Catamaran'
+
+      @media screen and (max-width: 600px)
+        margin-bottom: 3rem
+
       .circle
         width: 6rem
         height: 6rem
