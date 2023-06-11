@@ -133,22 +133,6 @@ $breakpoint: 640px
     @media screen and (max-width: 1400px)
       background-position: center bottom
 
-  .bg-image
-    position: absolute
-    inset: 0
-    background-image: url('~/assets/jpgs/city.jpg')
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: 40% 80%
-    opacity: 0.5
-
-    @media screen and (max-width: 1200px)
-      background-position: 40% 70%
-    @media screen and (max-width: 950px)
-      background-position: 40% 40%
-    @media screen and (max-width: 950px)
-      background-position: 40% 20%
-
   .dark-overlay-1
     position: absolute
     inset: 0
