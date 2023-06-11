@@ -59,16 +59,19 @@ $arrow-size: 20px
 
   .logos
     display: flex
+    flex-wrap: wrap
     justify-content: center
     align-items: center
-    margin-top: 1.2rem
+    //margin-top: 1.2rem
 
     .logo
-      //border: 1px red solid
       filter: grayscale(1)
       margin: 0 3rem
       height: 45px
       transition: filter 200ms ease-in-out
+      margin-top: 1.5rem
+      &:nth-last-of-type(-1)
+        margin: 0
       img
         height: 100%
 
@@ -90,5 +93,8 @@ $arrow-size: 20px
     .logo.hlt
       height: 65px
       opacity: .8
+
+      @media screen and (max-width: 1200px)
+        display: none
 
 </style>

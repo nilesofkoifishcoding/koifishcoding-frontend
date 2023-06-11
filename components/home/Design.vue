@@ -20,6 +20,7 @@
   margin-top: 15rem
   display: flex
   justify-content: center
+  overflow: hidden
 
   .panel
     width: 55rem
