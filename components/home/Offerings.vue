@@ -45,7 +45,7 @@ nuxtApp.hook('page:finish', () => {
 </script>
 
 <template>
-  <div class="offerings">
+  <div class="offerings" id="fit">
     <div class="offerings-container">
       <div class="title">Where We Fit In</div>
       <div class="items">

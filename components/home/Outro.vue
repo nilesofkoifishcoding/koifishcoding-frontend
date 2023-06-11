@@ -71,7 +71,7 @@ $breakpoint: 640px
     grid-template-rows: 35px 30px auto auto
 
     @media screen and (max-width: $breakpoint)
-      grid-template-columns: repeat(1, 1fr)
+      grid-template-columns: 100%
       width: 80%
       margin: 0 auto
 

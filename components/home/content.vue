@@ -50,7 +50,6 @@
   </div>
   <HomeHowItWorks v-if="false"/>
   <div class="pricing" style="display: none">
-
     <!-- <stripe-pricing-table pricing-table-id="prctbl_1MSSlbEtf4E1q3XKhjkvtvq7"
         publishable-key="pk_test_51MQvsfEtf4E1q3XKjzBgnwzHjWHHBSdjUbSC3rtT0AArLzVZz6T2tdemfJVDBOCHHAJfVKCX9LiBVskUtUA1gmOa00G7Nkuknh">
     </stripe-pricing-table> -->

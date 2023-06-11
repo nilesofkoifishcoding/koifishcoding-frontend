@@ -5,17 +5,23 @@
                 <img src="~/assets/svgs/koi-fish-coding-logo.svg" alt="Koi Fish Coding Logo" />
             </NuxtLink>
             <div class="nav-items">
-                <NuxtLink to="/programs/developer" class="nav-item">
+                <NuxtLink to="#organizations" class="nav-item">
                     <span>
-                        Full St<span class="highlight">a</span>ck Developer Program
+                        Organizations
+                    </span>
+                </NuxtLink>
+                <NuxtLink to="#team" class="nav-item">
+                    <span>
+                        Our Team
                     </span>
                 </NuxtLink>
                 <!-- <div class="nav-item"></div> -->
-                <div class="nav-item">
+                <NuxtLink to="#fit" class="nav-item">
                     <span>
-                        Ins<span class="highlight">t</span>ructor
+                        Where We Fit In
                     </span>
-                </div>
+                </NuxtLink>
+                <!--
                 <div class="nav-item">
                     <span>
                         <font-awesome-icon v-if="loaded" class="location highlight"
@@ -23,11 +29,13 @@
                         <span>Nashville</span>
                     </span>
                 </div>
+
                 <div class="nav-item">
                     <span>
                         <span class="highlight">F</span>AQ
                     </span>
                 </div>
+                -->
                 <UiLinkButton text="Book a Zoom Call Now" link="https://calendly.com/meet-with-koi-fish-coding/30min" />
             </div>
             <div class="mobile-nav-items">

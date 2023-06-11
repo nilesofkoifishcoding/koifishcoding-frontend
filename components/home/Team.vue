@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="team">
+  <div class="team" id="team">
     <div class="arrow"></div>
     <div class="title">Our Team</div>
     <div class="members">

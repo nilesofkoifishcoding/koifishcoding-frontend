@@ -3,7 +3,8 @@
         <KHeader />
         <slot />
     </div>
-    <KFooter />
+<!--    <KFooter />-->
+    <div style="height: 3rem"></div>
 </template>
 
 <script setup lang="ts">
