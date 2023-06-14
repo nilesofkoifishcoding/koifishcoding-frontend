@@ -4,7 +4,7 @@
 
 <template>
   <div class="team" id="team">
-    <div class="arrow"></div>
+<!--    <div class="arrow"></div>-->
     <div class="title">Our Team</div>
     <div class="members">
       <div class="member niles">

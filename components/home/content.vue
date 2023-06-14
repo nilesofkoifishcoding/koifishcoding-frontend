@@ -28,7 +28,8 @@
     <HomeHeroTyping/>
   </div>
   <HomeOrganizations />
-  <HomeYouCanToo/>
+  <HomeBreakfast />
+<!--  <HomeYouCanToo/>-->
   <HomeTeam/>
   <HomeOfferings/>
   <HomeBookNow />

@@ -4,7 +4,7 @@
 
 <template>
   <div class="orgs" id="organizations">
-    <div class="arrow"></div>
+<!--    <div class="arrow"></div>-->
     <div class="title">Trusted by forward-thinking organizations</div>
     <div class="logos">
       <div class="logo billmo">
