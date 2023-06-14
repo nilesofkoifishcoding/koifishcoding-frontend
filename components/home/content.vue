@@ -31,8 +31,10 @@
   <HomeBreakfast />
 <!--  <HomeExperience />-->
 <!--  <HomeYouCanToo/>-->
-  <HomeTeam/>
+  <br><br>
   <HomeOfferings/>
+  <br><br>
+  <HomeTeam/>
   <HomeBookNow />
   <HomeOutro />
 <!--  <HomeDesign />-->
