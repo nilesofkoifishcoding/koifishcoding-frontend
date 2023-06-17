@@ -26,8 +26,6 @@ $arrow-size: 20px
 
 .team
   margin: 0rem 0 0rem
-  background-color: var(--color-brand-1)
-  background-color: var(--color-white-a)
   padding-bottom: 4rem
   position: relative
 

@@ -33,9 +33,10 @@
 <!--  <HomeYouCanToo/>-->
   <br><br>
   <HomeOfferings/>
-  <br><br>
+  <br><br><br>
   <HomeTeam/>
   <HomeBookNow />
+  <HomeFloatingCard />
   <HomeOutro />
 <!--  <HomeDesign />-->
 <!--  <div style="height: 300px"></div>-->

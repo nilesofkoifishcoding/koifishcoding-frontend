@@ -57,7 +57,7 @@ nuxtApp.hook('page:finish', () => { loaded.value = true })
 $breakpoint: 640px
 
 .outro
-  background-color: var(--color-dark-1)
+  //background-color: var(--color-dark-d2)
   min-height: 30rem
   position: relative
   margin-top: 2rem
