@@ -61,16 +61,39 @@ function onMouseLeave() {
 <!--  <div class="fc" ref="card">-->
     <div ref="glow" class="glow"></div>
   </div>
+  <div class="quote">
+    <div>
+      "We solve tough problems & build custom apps with ridiculous speed."
+    </div>
+    <div>- Niles Brandon</div>
+  </div>
 </div>
 </template>
 
 <style scoped lang="sass">
 .fc-container
+
   display: flex
   justify-content: center
-  padding: 2rem 0
+  padding: 2rem 1rem
   perspective: 1500px
   background: radial-gradient(farthest-side, white, var(--color-bg))
+  margin-bottom: 4rem
+
+  @media screen and (max-width: 990px)
+    flex-direction: column
+    align-items: center
+    .quote
+      margin-top: 2rem
+      font-size: 1.5rem
+
+  .quote
+    flex: 1
+    max-width: 800px
+    padding-left: 2rem
+    font-family: Kalam
+    font-size: 3rem
+    font-weight: 300
 
   .fc
     width: 400px
