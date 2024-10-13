@@ -1,6 +1,7 @@
 # Koi Fish Coding
 ## Update - October 12th, 2024
-### Again g
+by Niles Brandon
+
 
 # Nuxt 3 Minimal Starter
 
