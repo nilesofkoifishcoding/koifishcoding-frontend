@@ -28,7 +28,6 @@ const props = withDefaults(
       transparentBg: undefined
     }
 )
-console.log('2222hey')
 const backgroundColor = computed(() => {
   return props.transparentBg ? 'transparent' : undefined
 })

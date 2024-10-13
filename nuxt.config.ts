@@ -9,9 +9,9 @@ export default defineNuxtConfig({
         head: {
             title: 'Koi Fish Coding',
             link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://static.koifishcoding.com/favicon.ico'}],
-            script: [
-                { src: 'https://js.stripe.com/v3/pricing-table.js'},
-            ]
+            // script: [
+            //     { src: 'https://js.stripe.com/v3/pricing-table.js'},
+            // ]
         },
     },
     vue: {
