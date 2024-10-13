@@ -10,12 +10,7 @@
       <div class="member niles">
         <div class="circle"></div>
         <div class="name">Niles Brandon</div>
-        <div class="title">Founder/CTO</div>
-      </div>
-      <div class="member whitney">
-        <div class="circle"></div>
-        <div class="name">Whitney Pledger</div>
-        <div class="title">Operations</div>
+        <div class="title">Founder</div>
       </div>
     </div>
   </div>
@@ -62,7 +57,7 @@ $arrow-size: 20px
     margin-top: 2rem
     max-width: 24rem
     display: flex
-    justify-content: space-between
+    justify-content: center
     color: var(--color-white)
     color: var(--color-brand-3)
 
