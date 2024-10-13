@@ -1,3 +1,8 @@
+# Koi Fish Coding
+## Update - October 12th, 2024
+by Niles Brandon
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
