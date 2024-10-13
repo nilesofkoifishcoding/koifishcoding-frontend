@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-
+console.log('Hey :) Koi Fish Coding just saying hi.')
 </script>
 
 <style lang="sass">
