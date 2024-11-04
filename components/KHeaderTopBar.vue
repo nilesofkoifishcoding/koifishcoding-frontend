@@ -2,7 +2,7 @@
   <div :class="['top-bar', props.transparentBg && 'transparent']">
     <div class="call">
       <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-phone']"/>
-      <span class="number">(615) 382-3829</span>
+      <span class="number">(724) 989-5009</span>
     </div>
     <div class="lang">
       <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-earth-americas']"/>
@@ -14,7 +14,7 @@
     </NuxtLink>
     <div class="call2">
       <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-phone']"/>
-      <span class="number">(615) 382-3829</span>
+      <span class="number">(724) 989-5009</span>
     </div>
   </div>
 </template>

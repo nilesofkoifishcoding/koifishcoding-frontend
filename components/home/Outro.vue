@@ -41,7 +41,7 @@ nuxtApp.hook('page:finish', () => { loaded.value = true })
       <div class="icon">
         <font-awesome-icon v-if="loaded" :icon="['fas', 'fa-phone']" />
       </div>
-      <div class="content">(615) 382-3829</div>
+      <div class="content">(724) 989-5009</div>
     </div>
     <div class="legal">
       <div>Privacy Policy</div>
